@@ -2,7 +2,7 @@ const CACHE_NAME = 'eesh-vandan-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
-  './data.js',           // <-- Cached alongside HTML
+  './data.js',
   './manifest.json',
   './diya.png'
 ];
