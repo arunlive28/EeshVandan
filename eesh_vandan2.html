@@ -1,0 +1,3219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ईश वंदन - Eesh Vandan | पावन मंत्र, स्तोत्र एवं वैदिक हवन सहायक</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Manifest Link -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Mobile App Meta Tags -->
+    <meta name="theme-color" content="#8b4a2b">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="diya.png">
+
+  <style>
+    /* Sole Theme: Muted Mud & Earth color theme (मृत्तिका / Clay & Earth) */
+    :root {
+      --bg-gradient: linear-gradient(135deg, #ded2c3 0%, #cfbfad 50%, #c4b19d 100%);
+      --surface-bg: rgba(225, 214, 200, 0.92);
+      --card-bg: #eae0d4;
+      --card-border: rgba(121, 91, 67, 0.28);
+      --card-shadow: 0 12px 32px -6px rgba(78, 56, 40, 0.16), 0 3px 6px -2px rgba(60, 42, 28, 0.08);
+      --text-main: #36281e;
+      --text-muted: #644e3f;
+      --text-hint: #8c7361;
+      --accent: #8b4a2b; /* Warm terracotta mud */
+      --accent-hover: #70361c;
+      --accent-glow: rgba(139, 74, 43, 0.28);
+      --secondary-accent: #6b705c; /* Muted olive mud ash */
+      --highlight-word: #c2410c; /* High-contrast terracotta ochre */
+      --highlight-text: #ffffff;
+      --active-card: #ded0bf;
+      --tag-bg: #d7c5b2;
+      --tag-color: #5c321d;
+      --control-bg: #dfd2c2;
+      --control-border: #bfad9b;
+      --slider-track: #bfae9c;
+      --divider: #bcaaa9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    .app-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.85rem 0.75rem 2.5rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    @media (min-width: 640px) {
+      .app-container {
+        padding: 1.25rem 1rem 3rem;
+        gap: 1.25rem;
+      }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--divider);
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--accent), #d97706);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.35rem;
+      font-weight: bold;
+      box-shadow: 0 4px 12px var(--accent-glow);
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 640px) {
+      .brand-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        font-size: 1.6rem;
+      }
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .brand-title {
+      font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+      font-size: clamp(1.15rem, 4vw, 1.45rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--text-main);
+      line-height: 1.15;
+    }
+
+    .brand-title span {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.95rem, 3.2vw, 1.15rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      margin-left: 0.25rem;
+    }
+
+    .brand-sub {
+      font-size: clamp(0.68rem, 2.3vw, 0.78rem);
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+      font-weight: 600;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+    }
+
+    .icon-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--control-border);
+      color: var(--text-main);
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 640px) {
+      .icon-btn {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        font-size: 1.1rem;
+      }
+    }
+
+    .icon-btn:hover {
+      background: var(--control-bg);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .collection-nav {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.35rem;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .collection-nav::-webkit-scrollbar {
+      height: 4px;
+    }
+    .collection-nav::-webkit-scrollbar-thumb {
+      background: var(--control-border);
+      border-radius: 4px;
+    }
+
+    .preset-pill {
+      background: var(--card-bg);
+      border: 1px solid var(--control-border);
+      color: var(--text-muted);
+      padding: 0.42rem 0.85rem;
+      border-radius: 9999px;
+      font-size: clamp(0.78rem, 2.5vw, 0.85rem);
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
+
+    .preset-pill.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+      box-shadow: 0 3px 10px var(--accent-glow);
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 860px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .reader-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 1.25rem 1rem;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      min-height: auto;
+    }
+
+    @media (min-width: 640px) {
+      .reader-card {
+        padding: 2rem 1.75rem;
+        border-radius: 20px;
+        min-height: 440px;
+      }
+    }
+
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.85rem;
+    }
+
+    .step-badge {
+      background: var(--tag-bg);
+      color: var(--tag-color);
+      font-size: clamp(0.7rem, 2.2vw, 0.78rem);
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .status-wave {
+      display: flex;
+      align-items: center;
+      gap: 3.5px;
+      height: 18px;
+    }
+
+    .wave-bar {
+      width: 3.5px;
+      background: var(--accent);
+      border-radius: 4px;
+      height: 4px;
+      transition: height 0.15s ease;
+    }
+
+    .status-wave.speaking .wave-bar:nth-child(1) { animation: wave 0.8s infinite ease-in-out; }
+    .status-wave.speaking .wave-bar:nth-child(2) { animation: wave 0.8s 0.15s infinite ease-in-out; }
+    .status-wave.speaking .wave-bar:nth-child(3) { animation: wave 0.8s 0.3s infinite ease-in-out; }
+    .status-wave.speaking .wave-bar:nth-child(4) { animation: wave 0.8s 0.45s infinite ease-in-out; }
+    .status-wave.speaking .wave-bar:nth-child(5) { animation: wave 0.8s 0.2s infinite ease-in-out; }
+
+    @keyframes wave {
+      0%, 100% { height: 4px; }
+      50% { height: 18px; }
+    }
+
+    .step-title {
+      font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.65rem;
+      line-height: 1.35;
+    }
+
+    .devanagari-container {
+      font-family: 'Noto Sans Devanagari', 'Poppins', serif;
+      font-size: clamp(1.35rem, 4.6vw, 1.95rem);
+      line-height: 1.75;
+      font-weight: 700;
+      color: var(--text-main);
+      text-align: center;
+      padding: 0.85rem 0.25rem;
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      user-select: text;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+
+    .word-token {
+      display: inline-block;
+      padding: 0.12rem 0.35rem;
+      margin: 0.12rem 0.15rem;
+      border-radius: 6px;
+      transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease;
+    }
+
+    .word-token.highlight {
+      background: var(--highlight-word) !important;
+      color: var(--highlight-text) !important;
+      transform: scale(1.06);
+      box-shadow: 0 3px 10px rgba(139, 74, 43, 0.35);
+      border-radius: 6px;
+    }
+
+    /* English translation & phonetics permanently hidden */
+    .phonetic-text {
+      display: none !important;
+    }
+
+    .meaning-box {
+      background: var(--control-bg);
+      border-left: 3.5px solid var(--accent);
+      border-radius: 8px;
+      padding: 0.75rem 0.85rem;
+      font-size: clamp(0.8rem, 2.4vw, 0.88rem);
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      line-height: 1.5;
+      transition: all 0.25s ease;
+    }
+
+    .meaning-box.speaking-explanation {
+      border-left-color: #d97706;
+      background: #e6dacb;
+      box-shadow: 0 0 0 2px var(--accent-glow);
+    }
+
+    .meaning-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .meaning-content {
+      margin-top: 0.45rem;
+    }
+
+    .meaning-section {
+      margin-bottom: 0.4rem;
+    }
+
+    .meaning-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .meaning-tag {
+      font-weight: 700;
+      color: var(--accent);
+      display: inline-block;
+      margin-right: 0.25rem;
+    }
+
+    /* Ahuti Repeat & Counter Box for Step 9 */
+    .ahuti-repeat-box {
+      margin-top: 0.85rem;
+      background: var(--control-bg);
+      border: 1.5px solid var(--accent);
+      border-radius: 12px;
+      padding: 0.75rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+
+    .ahuti-repeat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .ahuti-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .ahuti-flame-icon {
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .ahuti-box-title {
+      font-size: clamp(0.82rem, 2.5vw, 0.92rem);
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .ahuti-box-sub {
+      font-size: clamp(0.68rem, 2vw, 0.75rem);
+      color: var(--text-muted);
+    }
+
+    .ahuti-counter-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card-bg);
+      border: 1px solid var(--control-border);
+      border-radius: 9px;
+      padding: 0.45rem 0.65rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .ahuti-counter-stat {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .ahuti-stat-label {
+      font-size: clamp(0.72rem, 2.2vw, 0.8rem);
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .ahuti-stat-badge {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.2rem;
+      background: var(--active-card);
+      border: 1px solid var(--card-border);
+      padding: 0.15rem 0.5rem;
+      border-radius: 6px;
+    }
+
+    .ahuti-count-num {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .ahuti-count-total {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .ahuti-btn-group {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .ahuti-adj-btn {
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
+      color: var(--text-main);
+      padding: 0.35rem 0.65rem;
+      min-height: 36px;
+      min-width: 38px;
+      border-radius: 7px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .ahuti-adj-btn:hover, .ahuti-adj-btn:active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .ahuti-adj-btn.reset {
+      color: var(--text-muted);
+    }
+
+    .ahuti-adj-btn.reset:hover, .ahuti-adj-btn.reset:active {
+      background: #dc2626;
+      border-color: #dc2626;
+      color: #fff;
+    }
+
+    .controls-wrapper {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 5px;
+      background: var(--slider-track);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), #d97706);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .buttons-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      outline: none;
+      padding: 0.6rem 0.95rem;
+      min-height: 42px;
+      border-radius: 11px;
+      font-weight: 600;
+      font-size: clamp(0.82rem, 2.5vw, 0.9rem);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+      touch-action: manipulation;
+    }
+
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover:not(:disabled) {
+      background: var(--card-bg);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .btn-play-hero {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #ea580c);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 18px var(--accent-glow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      touch-action: manipulation;
+      flex-shrink: 0;
+    }
+
+    .btn-play-hero:hover, .btn-play-hero:active {
+      transform: scale(1.06);
+      box-shadow: 0 8px 24px var(--accent-glow);
+    }
+
+    .toggle-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: clamp(0.78rem, 2.4vw, 0.85rem);
+      cursor: pointer;
+      user-select: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      min-height: 38px;
+    }
+
+    .toggle-pill input { display: none; }
+
+    .toggle-track {
+      width: 36px;
+      height: 20px;
+      background: var(--slider-track);
+      border-radius: 20px;
+      position: relative;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+
+    .toggle-track::before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .toggle-pill input:checked + .toggle-track {
+      background: var(--accent);
+    }
+
+    .toggle-pill input:checked + .toggle-track::before {
+      transform: translateX(16px);
+    }
+
+    .side-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .panel-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    @media (min-width: 640px) {
+      .panel-box {
+        border-radius: 16px;
+        padding: 1.25rem;
+      }
+    }
+
+    .panel-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-main);
+    }
+
+    .collapsible-header {
+      cursor: pointer;
+      user-select: none;
+      padding: 0.2rem 0;
+      transition: opacity 0.2s;
+    }
+
+    .collapsible-header:hover {
+      opacity: 0.85;
+    }
+
+    .chevron-icon {
+      display: inline-block;
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 0.75rem;
+      color: var(--accent);
+    }
+
+    .chevron-icon.expanded {
+      transform: rotate(90deg);
+    }
+
+    .settings-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .collapsible-body {
+      display: none;
+      margin-top: 0.9rem;
+      border-top: 1px dashed var(--divider);
+      padding-top: 0.85rem;
+    }
+
+    .collapsible-body.expanded {
+      display: flex;
+    }
+
+    .style-presets-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem;
+      margin-top: 0.25rem;
+    }
+
+    .style-preset-btn {
+      padding: 0.4rem 0.5rem;
+      border: 1px solid var(--control-border);
+      background: var(--control-bg);
+      color: var(--text-main);
+      border-radius: 8px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .style-preset-btn:hover {
+      border-color: var(--accent);
+      background: var(--surface-bg);
+    }
+
+    .style-preset-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .slider-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .slider-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 5px;
+      background: var(--slider-track);
+      border-radius: 4px;
+      outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+    }
+
+    .voice-select {
+      width: 100%;
+      padding: 0.55rem 0.75rem;
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
+      color: var(--text-main);
+      border-radius: 10px;
+      font-size: 0.82rem;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .step-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-height: 280px;
+      overflow-y: auto;
+      padding-right: 0.25rem;
+    }
+
+    .step-list::-webkit-scrollbar {
+      width: 5px;
+    }
+    .step-list::-webkit-scrollbar-thumb {
+      background: var(--control-border);
+      border-radius: 5px;
+    }
+
+    .step-item {
+      padding: 0.75rem 0.85rem;
+      background: var(--control-bg);
+      border: 1px solid transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .step-item:hover {
+      border-color: var(--control-border);
+      background: var(--surface-bg);
+    }
+
+    .step-item.active {
+      background: var(--active-card);
+      border-color: var(--accent);
+    }
+
+    .step-item-number {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-item.active .step-item-number {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .step-item-info {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      padding: 1rem;
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      width: 100%;
+      max-width: 520px;
+      padding: 1.6rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      transform: translateY(20px);
+      transition: transform 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .modal-backdrop.open .modal-card {
+      transform: translateY(0);
+    }
+
+    .input-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .input-field label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .input-field input, .input-field textarea {
+      padding: 0.65rem 0.85rem;
+      border-radius: 10px;
+      border: 1px solid var(--control-border);
+      background: var(--control-bg);
+      color: var(--text-main);
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+    }
+
+    .input-field textarea {
+      resize: vertical;
+      min-height: 80px;
+      font-family: 'Noto Sans Devanagari', inherit;
+    }
+
+    .input-field input:focus, .input-field textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(40px);
+      background: #1e1b18;
+      color: #fff;
+      padding: 0.75rem 1.4rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 200;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .keyboard-legend {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-hint);
+      margin-top: 0.5rem;
+    }
+
+    .kbd {
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
+      border-radius: 4px;
+      padding: 0.15rem 0.4rem;
+      font-size: 0.72rem;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <header>
+      <div class="brand">
+        <div class="brand-icon">🪔</div>
+        <div class="brand-text">
+          <h1 class="brand-title">ईश वंदन <span>Eesh Vandan</span></h1>
+          <p class="brand-sub">पावन मंत्र, स्तुति, स्तोत्र एवं वैदिक हवन सहायक (Divine Chanting & Ritual Companion)</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" id="addStepBtn" title="नया चरण जोड़ें (Add Custom Step)">➕</button>
+      </div>
+    </header>
+
+    <!-- Collection Selector Bar with Dropdown & Browse Button -->
+    <div class="collection-selector-bar">
+      <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 700; font-size: 0.88rem; color: var(--accent); flex-shrink: 0;">
+        <span>📜 संग्रह (Collection):</span>
+      </div>
+      <select class="collection-select" id="collectionDropdown" title="पवित्र मंत्र एवं विधि संग्रह चुनें">
+        <!-- Populated via JS -->
+      </select>
+      <button class="browse-collections-btn" id="openCollectionModalBtn" title="सभी संग्रह की सूची देखें (Browse All Collections)">
+        <span>🗂️ सूची देखें (Browse)</span>
+      </button>
+    </div>
+
+    <!-- Main Workspace -->
+    <div class="main-grid">
+      <!-- Left: Step Reading Hero Section -->
+      <section class="reader-card">
+        <div>
+          <div class="step-header">
+            <span class="step-badge" id="stepCounterBadge">Step 1 of 16</span>
+            <div class="status-wave" id="statusWave" title="Speech Synthesizer Status">
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+            </div>
+          </div>
+
+          <h2 class="step-title" id="displayTitle">१. पवित्रीकरणम्</h2>
+
+          <div class="devanagari-container" id="displayDevanagari">
+            <!-- Words injected and highlighted here -->
+          </div>
+
+          <!-- English pronunciation / translation permanently hidden -->
+          <div class="phonetic-text" id="displayPhonetic"></div>
+
+          <!-- Collapsible Ritual Meaning Box -->
+          <div class="meaning-box" id="meaningContainer">
+            <div class="meaning-header" id="meaningToggleBtn" title="क्लिक करके निर्देश छुपाएँ या देखें">
+              <strong style="color: var(--accent);">📖 विधि एवं भावना निर्देश</strong>
+              <span id="meaningToggleIcon" style="font-size: 0.8rem; color: var(--accent);">▼</span>
+            </div>
+            <div class="meaning-content" id="meaningContent">
+              <span id="displayMeaning"></span>
+            </div>
+          </div>
+
+          <!-- Ahuti Repeat & Counter Box for Step 9 -->
+          <div class="ahuti-repeat-box" id="ahutiRepeatBox" style="display: none;">
+            <div class="ahuti-repeat-header">
+              <div class="ahuti-title-group">
+                <span class="ahuti-flame-icon">🔥</span>
+                <div>
+                  <div class="ahuti-box-title">गायत्री मंत्राहुति चक्र (Ahuti Repeat Loop)</div>
+                  <div class="ahuti-box-sub">आहुति पूर्ण होने पर स्वतः पुनरावृत्ति</div>
+                </div>
+              </div>
+              <label class="toggle-pill" title="Toggle repeat loop for this ahuti">
+                <input type="checkbox" id="ahutiRepeatToggle" checked>
+                <div class="toggle-track"></div>
+                <span style="font-weight: 700; color: var(--text-main);">दोहराव (Repeat)</span>
+              </label>
+            </div>
+
+            <div class="ahuti-counter-row">
+              <div class="ahuti-counter-stat">
+                <span class="ahuti-stat-label">वर्तमान आहुति</span>
+                <div class="ahuti-stat-badge">
+                  <span id="ahutiCountDisplay" class="ahuti-count-num">1</span>
+                  <span class="ahuti-count-total">/ 24</span>
+                </div>
+              </div>
+
+              <div class="ahuti-btn-group">
+                <button class="ahuti-adj-btn" id="ahutiMinusBtn" title="Previous / Minus 1">− १</button>
+                <button class="ahuti-adj-btn" id="ahutiPlusBtn" title="Next / Plus 1">+ १</button>
+                <button class="ahuti-adj-btn reset" id="ahutiResetBtn" title="Reset Counter">↺ रीसेट</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls-wrapper">
+          <div class="progress-bar-container">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+
+          <div class="buttons-row">
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <button class="btn btn-secondary" id="prevBtn" title="Previous Step (Left Arrow)">◀ पिछला</button>
+              <button class="btn-play-hero" id="playBtn" title="Play/Stop (Spacebar)">▶</button>
+              <button class="btn-secondary" id="nextBtn" title="Next Step (Right Arrow)">अगला ▶</button>
+            </div>
+
+            <div style="display: flex; gap: 0.65rem; align-items: center; flex-wrap: wrap;">
+              <label class="toggle-pill" id="explainToggleWrapper" title="यज्ञ विधि निर्देश एवं मंत्र का हिंदी अर्थ बोलकर समझाएँ (Explain instructions & meaning in Hindi)">
+                <input type="checkbox" id="explainToggle" checked>
+                <div class="toggle-track"></div>
+                <span style="font-weight: 700; color: var(--text-main);">व्याख्या (Explain)</span>
+              </label>
+
+              <label class="toggle-pill" title="Automatically advance to the next step when finished speaking">
+                <input type="checkbox" id="autoAdvanceToggle" checked>
+                <div class="toggle-track"></div>
+                <span>स्वचालित (Auto)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: Settings & Step Navigation -->
+      <aside class="side-panel">
+        <!-- Collapsible Voice Settings Panel (Collapsed by default) -->
+        <div class="panel-box">
+          <div class="panel-title collapsible-header" id="voicePanelToggle" title="क्लिक करके ध्वनि विकल्प खोलें या बंद करें">
+            <div style="display: flex; align-items: center; gap: 0.45rem;">
+              <span class="chevron-icon" id="voiceChevron">▶</span>
+              <span>ध्वनि नियंत्रण (Voice Audio)</span>
+            </div>
+            <span style="font-size: 0.78rem; color: var(--accent); font-weight: 700;" id="voiceBadge">खोज जारी...</span>
+          </div>
+
+          <div class="settings-group collapsible-body" id="voicePanelBody">
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">
+                आवाज़ चुनें (Voice Model)
+              </label>
+              <select class="voice-select" id="masterVoiceSelector">
+                <optgroup label="🌐 क्लाउड वैदिक वाणी (Universal Web Audio)" id="cloudVoiceOptGroup">
+                  <option value="cloud_hi">🌐 क्लाउड हिंदी/संस्कृत (Cloud Universal - Recommended)</option>
+                  <option value="cloud_sa">🌐 क्लाउड शुद्ध संस्कृत (Cloud Sanskrit)</option>
+                </optgroup>
+                <optgroup label="💻 सिस्टम टीटीएस (Detected Voices)" id="systemVoiceOptGroup">
+                  <!-- Dynamically populated -->
+                </optgroup>
+              </select>
+            </div>
+
+            <!-- Chanting Style Presets (Default set to Ritual / Acharya) -->
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">
+                वाचन शैली (Chanting Style Preset)
+              </label>
+              <div class="style-presets-grid">
+                <button class="style-preset-btn active" data-style="acharya">🛕 आचार्य (Ritual)</button>
+                <button class="style-preset-btn" data-style="rishi">🧘 ऋषि (Deep)</button>
+                <button class="style-preset-btn" data-style="dhyan">🌸 साधना (Calm)</button>
+                <button class="style-preset-btn" data-style="fast">⚡ शीघ्र (Fast)</button>
+              </div>
+            </div>
+
+            <div class="slider-row">
+              <div class="slider-header">
+                <span>गति (Speech Rate)</span>
+                <span id="rateValLabel">0.88x</span>
+              </div>
+              <input type="range" id="rateSlider" min="0.5" max="1.5" step="0.05" value="0.88">
+            </div>
+
+            <div class="slider-row">
+              <div class="slider-header">
+                <span>स्वर पिच (Pitch)</span>
+                <span id="pitchValLabel">1.00</span>
+              </div>
+              <input type="range" id="pitchSlider" min="0.7" max="1.3" step="0.05" value="1.00">
+            </div>
+
+            <label class="toggle-pill" style="margin-top: 0.3rem;" title="Play a meditative singing bowl bell when changing steps">
+              <input type="checkbox" id="chimeToggle" checked>
+              <div class="toggle-track"></div>
+              <span>प्रारंभिक घंटी (Chime Sound)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step List -->
+        <div class="panel-box">
+          <div class="panel-title" style="margin-bottom: 0.9rem;">
+            <span>चरण सूची (Steps)</span>
+            <button class="btn btn-secondary" id="editCurrentStepBtn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">संपादित (Edit)</button>
+          </div>
+          <div class="step-list" id="stepQueue">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="keyboard-legend">
+      कुंजीपटल संकेत: <span class="kbd">Space</span> बोलना/रोकना • <span class="kbd">←</span> पिछला • <span class="kbd">→</span> अगला
+    </div>
+  </div>
+
+  <!-- Sacred Collection Picker Modal -->
+  <div class="modal-backdrop" id="collectionModal">
+    <div class="modal-card" style="max-width: 680px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--divider); padding-bottom: 0.65rem;">
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--accent);">📜 पावन संग्रह सूची (Sacred Collections)</h3>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.15rem;">पाठ अथवा हवन के लिए अभीष्ट संग्रह का चयन करें</p>
+        </div>
+        <button class="icon-btn" id="closeCollectionModalBtn" title="बंद करें (Close)">✕</button>
+      </div>
+
+      <div class="collection-modal-grid" id="collectionsModalList">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Step / Edit Step Modal -->
+  <div class="modal-backdrop" id="stepModal">
+    <div class="modal-card">
+      <h3 style="font-size: 1.15rem; font-weight: 700;" id="modalHeading">नया चरण जोड़ें (Add Step)</h3>
+
+      <div class="input-field">
+        <label>शीर्षक (Step Title)</label>
+        <input type="text" id="modalInputTitle" placeholder="उदा. चरण ४: संकल्प">
+      </div>
+
+      <div class="input-field">
+        <label>देवनागरी पाठ (Sanskrit / Hindi Text) *</label>
+        <textarea id="modalInputDevanagari" placeholder="देवनागरी लिपि में श्लोक या वाक्य लिखें..."></textarea>
+      </div>
+
+      <div class="input-field">
+        <label>अर्थ या निर्देश (Meaning / Guideline)</label>
+        <textarea id="modalInputMeaning" style="min-height: 70px;" placeholder="अर्थ या विधि निर्देश..."></textarea>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 0.6rem; margin-top: 0.5rem;">
+        <button class="btn btn-secondary" id="modalCancelBtn">रद्द करें (Cancel)</button>
+        <button class="btn btn-primary" id="modalSaveBtn">सहेजें (Save)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toastMessage">संदेश</div>
+
+  <script>
+    const PRESETS = {
+      gayatri_havan: {
+        id: "gayatri_havan",
+        name: "🔥 गायत्री हवन विधि (Gayatri Havan)",
+        desc: "संक्षिप्त गायत्री यज्ञ पद्धति: पवित्रीकरणम् से पूर्णाहुति एवं सूर्यार्घ्य तक",
+        steps: [
+          {
+            title: "१. पवित्रीकरणम् (Purification)",
+            devanagari: "ॐ अपवित्रः पवित्रो वा, सर्वावस्थां गतोऽपि वा। यः स्मरेत्पुण्डरीकाक्षं, स बाह्याभ्यन्तरः शुचिः॥ ॐ पुनातु पुण्डरीकाक्षः, पुनातु पुण्डरीकाक्षः, पुनातु।",
+            meaning: "विधि एवं भावना: अपने बायें हाथ में एक चम्मच जल लें, दाहिने हाथ से ढक लें। मंत्र पूरा होने पर अभिमंत्रित जल सम्पूर्ण शरीर पर छिड़क लें। भावना करें कि देव शक्तियाँ पवित्रता-दिव्यता की वर्षा कर रही हैं।",
+            mantraMeaning: "मंत्र अर्थ: मनुष्य चाहे किसी भी अवस्था में हो, पवित्र हो या अपवित्र, जो भी पुण्डरीकाक्ष भगवान का स्मरण करता है, वह बाहर और भीतर दोनों से पवित्र हो जाता है।"
+          },
+          {
+            title: "२. आचमनम् (Sipping Water for Inner Purity)",
+            devanagari: "ॐ अमृतोपस्तरणमसि स्वाहा। ॐ अमृतापिधानमसि स्वाहा। ॐ सत्यं यशः श्रीर्मयि, श्रीः श्रयतां स्वाहा।",
+            meaning: "विधि एवं भावना: दाहिने हाथ में जल लेकर तीन बार मंत्र के स्वाहा शब्द के साथ एक-एक आचमनी जल मुख में डालें। भावना करें कि मन, वाणी एवं अंतःकरण पवित्र बन रहे हैं।",
+            mantraMeaning: "मंत्र अर्थ: हे अमृत स्वरूप प्रभु! यह जल अंतरात्मा को शीतलता प्रदान करे। सत्य, यश और दैवीय ऐश्वर्य हमारे भीतर सदैव प्रतिष्ठित रहें।"
+          },
+          {
+            title: "३. शिखा वन्दनम् (Touching the Crown / Energy Center)",
+            devanagari: "ॐ चिद्रूपिणि महामाये, दिव्यतेजः समन्विते। तिष्ठ देवि शिखामध्ये, तेजोवृद्धिं कुरुष्व मे॥",
+            meaning: "विधि एवं भावना: बायें हाथ में एक आचमनी जल लें। दाहिने हाथ की अंगुलियाँ इसमें भिगोकर शिखा स्थान को स्पर्श करें। भावना करें कि दैवीय चेतना शीर्ष स्थान पर विराजे।",
+            mantraMeaning: "मंत्र अर्थ: हे ज्ञान-स्वरूपिणी, महामाया और दिव्य तेज से युक्त भगवती! आप हमारी शिखा में विराजें और हमारे सद्ज्ञान व तेज की वृद्धि करें।"
+          },
+          {
+            title: "४. चन्दन धारणम् (Applying Sandalwood Mark)",
+            devanagari: "ॐ चन्दनस्य महत्पुण्यं, पवित्रम् पापनाशनम्। आपदाम् हरते नित्यं, लक्ष्मीस्तिष्ठति सर्वदा॥",
+            meaning: "विधि एवं भावना: दायें हाथ की अनामिका अंगुली के सहारे मस्तक पर चन्दन धारण करें। भावना करें मस्तक सदा शान्त और विवेक युक्त बना रहे।",
+            mantraMeaning: "मंत्र अर्थ: चन्दन महान पुण्यदायी, परम पवित्र और पापों का नाश करने वाला है। यह संकटों को हरता है और जीवन में लक्ष्मी को स्थिर रखता है।"
+          },
+          {
+            title: "५. रक्षा सूत्रम् (Tying Sacred Thread)",
+            devanagari: "ॐ व्रतेन दीक्षा माप्नोति दीक्षयाऽऽप्नोति दक्षिणाम्। दक्षिणा श्रद्धामाप्नोति श्रद्धया सत्यमाप्यते॥",
+            meaning: "विधि एवं भावना: पुरुषों व कन्याओं के दांये हाथ में तथा महिलाओं के बांये हाथ में कलावा बांधें। भाव करें हम अपना उत्तरदायित्व पूर्ण निष्ठा से निर्वहन करेंगे।",
+            mantraMeaning: "मंत्र अर्थ: व्रत से दीक्षा, दीक्षा से दक्षता, दक्षता से श्रद्धा और श्रद्धा से परम सत्य की प्राप्ति होती है।"
+          },
+          {
+            title: "६. पृथ्वी पूजनम् (Earth Reverence & Gratitude)",
+            devanagari: "ॐ पृथ्वी! त्वया धृता लोका, देवि त्वं विष्णुना धृता। त्वं च धारय मां देवि, पवित्रं कुरु चासनम्॥",
+            meaning: "विधि एवं भावना: धरती मां के प्रति अपनी कृतज्ञता की भावना एक चम्मच जल धरती पर छोड़कर व्यक्त करें।",
+            mantraMeaning: "मंत्र अर्थ: हे पृथ्वी देवी! आपने समस्त लोकों को धारण किया हुआ है। आप मुझे भी धारण करें और मेरे इस आसन को पवित्र करें।"
+          },
+          {
+            title: "७. गुरु आवाहनम् (Invocation of Guru Power)",
+            devanagari: "ॐ गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुरेव महेश्वरः। गुरुरेव परब्रह्म, तस्मै श्री गुरवे नमः॥ अखण्डमण्डलाकारं, व्याप्तं येन चराचरम्। तत्पदं दर्शितं येन, तस्मै श्री गुरवे नमः॥ ॐ श्री गुरवे नमः। आवाहयामि, स्थापयामि, ध्यायामि।",
+            meaning: "विधि एवं भावना: गुरु परमात्मा की दृश्यमान शक्तिधारा है। वह गुरु सत्ता हमें सतत् प्रेरणा एवं शक्ति देती रहे, इस भाव से नमन करें।",
+            mantraMeaning: "मंत्र अर्थ: गुरु ही ब्रह्मा, विष्णु और महेश्वर हैं। साक्षात् परब्रह्म स्वरूप सद्गुरु को सादर प्रणाम।"
+          },
+          {
+            title: "८. गायत्री आवाहनम् (Invocation of Divine Mother Gayatri)",
+            devanagari: "ॐ आयातु वरदे देवि, त्र्यक्षरे ब्रह्मवादिनि। गायत्रिच्छन्दसां मातः, ब्रह्मयोने नमोऽस्तुते॥ ॐ श्री गायत्र्यै नमः। आवाहयामि, स्थापयामि, ध्यायामि।",
+            meaning: "विधि एवं भावना: गायत्री परमात्मा की मूल शक्ति है। वह हमें सद्बुद्धि से भरती रहे, इस भाव के साथ आवाहन एवं ध्यान करें। (इसके बाद अग्नि स्थापन करें।)",
+            mantraMeaning: "मंत्र अर्थ: हे वरदायिनी, प्रणव स्वरूपिणी, वेदों की जननी मां गायत्री! आप हमारे यज्ञ में पधारें, आपको हमारा कोटि-कोटि नमन है।"
+          },
+          {
+            title: "९. १. गायत्री मंत्राहुति (Gayatri Ahuti - २४ आहुतियाँ)",
+            isHavanAhuti: true,
+            devanagari: "ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात्। स्वाहा॥",
+            meaning: "अग्नि स्थापन एवं आहुति निर्देश: गायत्री मंत्र बोलते हुए आहुतियाँ समर्पित करें (सुविधानुसार २४ आहुतियाँ)। प्रत्येक आहुति 'स्वाहा' के साथ दें।",
+            mantraMeaning: "मंत्र अर्थ: उस प्राणस्वरूप, दुःखनाशक, सुखस्वरूप, श्रेष्ठ, तेजस्वी परमात्मा को हम अंतरात्मा में धारण करें, जो हमारी बुद्धि को सन्मार्ग की ओर प्रेरित करे।"
+          },
+          {
+            title: "१०. २. महामृत्युंजय मंत्राहुति (Mahamrityunjaya Ahuti - ३ आहुतियाँ)",
+            devanagari: "ॐ त्र्यंबकं यजामहे सुगन्धिम् पुष्टिवर्धनम् उर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय माऽमृतात् - स्वाहा॥",
+            meaning: "आहुति निर्देश: महामृत्युंजय मंत्राहुति - ३ बार आहुति दें। समस्त व्याधियों और भय से मुक्ति की भावना करें।",
+            mantraMeaning: "मंत्र अर्थ: हम सुगंधित और जीवन-शक्ति को पुष्ट करने वाले त्रिनेत्रधारी शिव का पूजन करते हैं। हम मृत्यु के बंधनों से मुक्त होकर अमरता की ओर बढ़ें।"
+          },
+          {
+            title: "११. ३. सूर्य गायत्री मंत्राहुति (Surya Gayatri Ahuti - १ आहुति)",
+            devanagari: "ॐ भास्कराय विद्महे, दिवाकराय धीमहि। तन्नः सूर्यः प्रचोदयात्। - स्वाहा॥",
+            meaning: "आहुति निर्देश: सूर्य गायत्री मंत्राहुति - १ आहुति दें। जीवन में तेजस्विता व स्वास्थ्य की प्राप्ति का भाव करें।",
+            mantraMeaning: "मंत्र अर्थ: हम प्रकाश स्वरूप भगवान भास्कर का ध्यान करते हैं। वे सूर्यदेव हमारी प्रज्ञा को तेजस्वी मार्ग पर प्रेरित करें।"
+          },
+          {
+            title: "१२. ४. प्रखर प्रज्ञा आहुति (Prakhar Pragya Ahuti - १ आहुति)",
+            devanagari: "ॐ प्रखर प्रज्ञाय विद्महे महाकालाय धीमहि। तन्नः श्रीरामः प्रचोदयात्। - स्वाहा॥",
+            meaning: "आहुति निर्देश: प्रखर प्रज्ञा आहुति - १ आहुति दें। विवेक और वैचारिक क्रांति की चेतना जागृत करने की प्रार्थना करें।",
+            mantraMeaning: "मंत्र अर्थ: हम युग निर्माण की प्रखर प्रज्ञा और महाकाल सत्ता का ध्यान करते हैं। पूज्य गुरुदेव की चेतना हमें सत्कर्म की ओर प्रेरित करे।"
+          },
+          {
+            title: "१३. ५. सजल श्रद्धा आहुति (Sajal Shraddha Ahuti - १ आहुति)",
+            devanagari: "ॐ सजल श्रद्धायै विद्महे, महाशक्त्यै धीमहि। तन्नो भगवती प्रचोदयात्। - स्वाहा॥",
+            meaning: "आहुति निर्देश: सजल श्रद्धा आहुति - १ आहुति दें। अंतःकरण में मातृत्व, समर्पण एवं करुणा की स्थापना का संकल्प लें।",
+            mantraMeaning: "मंत्र अर्थ: हम स्नेह और सजल श्रद्धा स्वरूपिणी महाशक्ति का ध्यान करते हैं। वंदनीया माताजी की कृपा हमें सेवा भाव की ओर प्रेरित करे।"
+          },
+          {
+            title: "१४. ६. पूर्णाहुति (Poornahuti - Final Complete Offering)",
+            devanagari: "ॐ पूर्णमदः पूर्णमिदम् पूर्णात् पूर्णमुदच्यते। पूर्णस्य पूर्णमादाय पूर्ण मेवावशिष्यते। स्वाहा॥",
+            meaning: "विधि एवं निर्देश: सभी परिजन ससम्मान खड़े होकर नारियल/गोला के साथ अंतिम पूर्णाहुति समर्पित करें।",
+            mantraMeaning: "मंत्र अर्थ: वह परब्रह्म पूर्ण है और यह जगत भी पूर्ण है। पूर्ण से पूर्ण को निकाल लेने पर भी शेष केवल पूर्ण ही रहता है।"
+          },
+          {
+            title: "१५. ७. आरती (Aarti - Karpura Gauram)",
+            devanagari: "कर्पूर गौरम् करुणावतारं संसार सारं भुजगेन्द्रहारम्। सदावसन्तं हृदयारविन्दे भवं भवानी सहितं नमामि॥",
+            meaning: "विधि एवं निर्देश: दीप प्रज्वलित कर भक्ति भाव से सामूहिक आरती करें।",
+            mantraMeaning: "मंत्र अर्थ: कर्पूर के समान धवल गौर वर्ण वाले, करुणा के साक्षात अवतार भगवान शिव और माता भवानी को हम नमन करते हैं।"
+          },
+          {
+            title: "१६. ८. सूर्यार्घ्यदानम् (Surya Arghyadaanam)",
+            devanagari: "ॐ सूर्यदेव सहस्रांशो, तेजोराशे जगत्पते। अनुकम्पय मां भक्त्यां, गृहाणार्घ्यं दिवाकर॥ ॐ सूर्याय नमः, आदित्याय नमः, भास्कराय नमः।",
+            meaning: "विधि एवं निर्देश: ताम्र पात्र में शुद्ध जल लेकर भगवान भुवन भास्कर को दोनों हाथ उठाकर अर्घ्य समर्पित करें।",
+            mantraMeaning: "मंत्र अर्थ: हे सहस्रों किरणों वाले, तेज के पुंज जगतपति भुवन भास्कर! आप मुझ पर कृपा करें और मेरी अर्घ्य स्वीकार करें।"
+          }
+        ]
+      },
+      ganpati_mantras: {
+        id: "ganpati_mantras",
+        name: "🐘 श्री गणेश मंत्र एवं स्तुति (Ganpati Mantras)",
+        desc: "विघ्नहर्ता, बुद्धिदाता भगवान श्री गणेश जी के सिद्ध मंत्र एवं स्तोत्र",
+        steps: [
+          {
+            title: "१. गणेश ध्यानम् (Vakratunda Mahakaya)",
+            devanagari: "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥",
+            meaning: "विधि एवं भावना: दोनों हाथ जोड़कर प्रथम पूज्य श्री गणेश जी के मंगलमय स्वरूप का ध्यान करें।",
+            mantraMeaning: "मंत्र अर्थ: घुमावदार सूंड वाले, विशाल शरीर वाले, करोड़ों सूर्यों के समान तेजस्वी हे देव! आप मेरे समस्त कार्यों को सदा विघ्न-रहित संपन्न करें।"
+          },
+          {
+            title: "२. गणेश गायत्री मंत्र (Ganesh Gayatri)",
+            devanagari: "ॐ एकदन्ताय विद्महे, वक्रतुण्डाय धीमहि। तन्नो दन्तिः प्रचोदयात्॥",
+            meaning: "विधि एवं भावना: सद्बुद्धि, विवेक और जीवन में निर्विघ्न सफलता हेतु गणेश गायत्री का जाप करें।",
+            mantraMeaning: "मंत्र अर्थ: हम एकदन्त भगवान गणेश को जानते हैं, वक्रतुण्ड का ध्यान करते हैं। वे गजमुख प्रभु हमारी बुद्धि और चेतना को श्रेष्ठ मार्ग पर प्रेरित करें।"
+          },
+          {
+            title: "३. गणेश मूल / बीज मंत्र (Ganesh Moola Mantra)",
+            devanagari: "ॐ गं गणपतये नमः॥ ॐ गं गणपतये नमः॥ ॐ गं गणपतये नमः॥",
+            meaning: "विधि एवं भावना: समस्त कार्यों के आरम्भ, पूजा-अनुष्ठान अथवा नित्य स्मरण में इस बीज मंत्र का जाप करें।",
+            mantraMeaning: "मंत्र अर्थ: समस्त गणों के स्वामी, विघ्नविनाशक, मंगलमूर्ति भगवान श्री गणेश जी को मेरा सादर नमन है।"
+          },
+          {
+            title: "४. संकटनाशन गणेश स्तोत्रम् (Sankata Nashana Stotram)",
+            devanagari: "प्रणम्य शिरसा देवं गौरीपुत्रं विनायकम्। भक्तावासं स्मरेन्नित्यमायुःकामार्थसिद्धये॥ प्रथमं वक्रतुण्डं च एकदन्तं द्वितीयकम्। तृतीयं कृष्णपिङ्गाक्षं गजवक्त्रं चतुर्थकम्॥",
+            meaning: "विधि एवं भावना: जीवन के संकटों, ऋण और कष्टों के निवारण हेतु श्री नारद पुराणोक्त बारह नामों का पाठ करें।",
+            mantraMeaning: "मंत्र अर्थ: सिर झुकाकर गौरीपुत्र विनायक को प्रणाम करें और आयु, कामना तथा अर्थ की सिद्धि के लिए भक्तों के हृदय में वास करने वाले प्रभु का स्मरण करें।"
+          },
+          {
+            title: "५. गणेश अथर्वशीर्ष शांति पाठ (Atharvashirsha Shanti Mantra)",
+            devanagari: "ॐ नमस्ते गणपतये। त्वमेव प्रत्यक्षं तत्त्वमसि। त्वमेव केवलं कर्ताऽसि। त्वमेव केवलं धर्ताऽसि। त्वमेव केवलं हर्ताऽसि। त्वमेव सर्वं खल्विदं ब्रह्मासि। त्वं साक्षादात्मासि नित्यम्॥",
+            meaning: "विधि एवं भावना: परम ब्रह्म स्वरूप भगवान गणेश जी के प्रति अनन्य शरणागति और आत्म-साक्षात्कार का भाव रखें।",
+            mantraMeaning: "मंत्र अर्थ: हे गणराज! आपको नमस्कार है। आप ही प्रत्यक्ष परम तत्व हैं। आप ही एकमात्र सृष्टिकर्ता, पालनकर्ता और संहारकर्ता हैं।"
+          }
+        ]
+      },
+      laxmi_mantras: {
+        id: "laxmi_mantras",
+        name: "🪷 श्री महालक्ष्मी मंत्र एवं स्तुति (Laxmi Mantras)",
+        desc: "धन, समृद्धि, ऐश्वर्य एवं सौभाग्य प्रदायिनी माँ लक्ष्मी के दिव्य मंत्र",
+        steps: [
+          {
+            title: "१. महालक्ष्मी अष्टकम् (Mahalakshmi Ashtakam)",
+            devanagari: "नमस्तेऽस्तु महामाये श्रीपीठे सुरपूजिते। शङ्खचक्रगदाहस्ते महालक्ष्मि नमोऽस्तु ते॥ नमस्ते गरुडारूढे कोलासुरभयङ्करि। सर्वपापहरे देवि महालक्ष्मि नमोऽस्तु ते॥",
+            meaning: "विधि एवं भावना: कमल पर विराजित, शंख-चक्र-गदा धारिणी भगवती महालक्ष्मी के करुणामयी स्वरूप का ध्यान करें।",
+            mantraMeaning: "मंत्र अर्थ: हे महामाये! हे श्रीपीठ पर स्थित और देवताओं द्वारा पूजित देवी! शंख, चक्र और गदा धारण करने वाली हे महालक्ष्मी! आपको मेरा कोटि-कोटि नमन है।"
+          },
+          {
+            title: "२. महालक्ष्मी महामंत्र (Mahalakshmi Beej Mantra)",
+            devanagari: "ॐ श्रीं ह्रीं क्लीं महालक्ष्म्यै नमः॥ ॐ श्रीं ह्रीं क्लीं महालक्ष्म्यै नमः॥",
+            meaning: "विधि एवं भावना: कमलगट्टे अथवा स्फटिक की माला से सुख, समृद्धि एवं स्थिर लक्ष्मी की प्राप्ति हेतु जप करें।",
+            mantraMeaning: "मंत्र अर्थ: समस्त ऐश्वर्य, ज्ञान और सामर्थ्य प्रदायिनी, त्रिभुवन पूजिता माँ महालक्ष्मी को सादर प्रणाम।"
+          },
+          {
+            title: "३. श्री लक्ष्मी गायत्री मंत्र (Lakshmi Gayatri)",
+            devanagari: "ॐ महालक्ष्म्यै च विद्महे, विष्णुपत्न्यै च धीमहि। तन्नो लक्ष्मीः प्रचोदयात्॥",
+            meaning: "विधि एवं भावना: जीवन में शुचिता, सद्बुद्धि और दैवीय वैभव के जागरण हेतु नित्य लक्ष्मी गायत्री का पाठ करें।",
+            mantraMeaning: "मंत्र अर्थ: हम परमेश्वरी महालक्ष्मी को जानते हैं, भगवान श्रीहरि की पत्नी का ध्यान करते हैं। वे माँ लक्ष्मी हमारी चेतना को सन्मार्ग पर प्रेरित करें।"
+          },
+          {
+            title: "४. कनकधारा स्तोत्रम् सार (Kanakadhara Stotram)",
+            devanagari: "अङ्गं हरेः पुलकभूषणमाश्रयन्ती, भृङ्गाङ्गनेव मुकुलाभरणं तमालम्। अङ्गीकृताखिलविभूतिरपाङ्गलीला, माङ्गल्यदास्तु मम मङ्गलदेवतायाः॥",
+            meaning: "विधि एवं भावना: आदि शंकराचार्य विरचित कनकधारा स्तोत्र का पाठ कर दारिद्र्य नाश एवं कृपा की प्रार्थना करें।",
+            mantraMeaning: "मंत्र अर्थ: जैसे भंवरी खिले हुए तमाल वृक्ष का आश्रय लेती है, वैसे ही जो श्रीहरि के श्रीअंगों पर मुग्ध होकर विराजमान हैं—वे मंगलमयी लक्ष्मी मुझ पर कृपा दृष्टि करें।"
+          },
+          {
+            title: "५. सर्वमंगल लक्ष्मी प्रार्थना (Sarva Mangala Lakshmi)",
+            devanagari: "सर्वमङ्गलमाङ्गल्ये शिवे सर्वार्थसाधिके। शरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते॥",
+            meaning: "विधि एवं भावना: सम्पूर्ण परिवार के कल्याण, आरोग्य तथा आनंद की कामना से माता के चरणों में नमन करें।",
+            mantraMeaning: "मंत्र अर्थ: समस्त मंगलों में परम मंगलमयी, कल्याणकारिणी, सब पुरुषार्थों को सिद्ध करने वाली, शरणागतवत्सला माँ नारायणी! आपको नमस्कार है।"
+          }
+        ]
+      },
+      saraswati_mantras: {
+        id: "saraswati_mantras",
+        name: "📚 माँ सरस्वती मंत्र एवं वंदना (Saraswati Mantras)",
+        desc: "विद्या, वाणी, प्रज्ञा, संगीत एवं कला प्रदायिनी माँ सरस्वती की दिव्य आराधना",
+        steps: [
+          {
+            title: "१. सरस्वती वंदना (Saraswati Vandana)",
+            devanagari: "या कुन्देन्दुतुषारहारधवला या शुभ्रवस्त्रावृता, या वीणावरदण्डमण्डितकरा या श्वेतपद्मासना। या ब्रह्माच्युतशङ्करप्रभृतिभिर्देवैः सदा वन्दिता, सा मां पातु सरस्वती भगवती निःशेषजाड्यापहा॥",
+            meaning: "विधि एवं भावना: श्वेत पद्मासना, वीणावादिनी माँ शारदा का हाथ जोड़कर एकाग्रचित्त होकर ध्यान करें।",
+            mantraMeaning: "मंत्र अर्थ: जो कुंद के फूल, चंद्रमा और बर्फ के समान श्वेत हैं, जो वीणा के दंड से शोभित हैं, ब्रह्मा-विष्णु-महेश द्वारा नित्य पूजित हैं—वे भगवती सरस्वती मेरी संपूर्ण जड़ता को दूर कर मेरी रक्षा करें।"
+          },
+          {
+            title: "२. सरस्वती मूल / बीज मंत्र (Saraswati Beej Mantra)",
+            devanagari: "ॐ ऐं सरस्वत्यै नमः॥ ॐ ऐं सरस्वत्यै नमः॥ ॐ ऐं सरस्वत्यै नमः॥",
+            meaning: "विधि एवं भावना: स्मरण शक्ति, एकाग्रता, वाक्-सिद्धि एवं तीव्र बुद्धि की प्राप्ति हेतु जप करें।",
+            mantraMeaning: "मंत्र अर्थ: ज्ञान और वाणी की अधिष्ठात्री, 'ऐं' बीज स्वरूपिणी माँ सरस्वती को मेरा सादर प्रणाम है।"
+          },
+          {
+            title: "३. सरस्वती गायत्री मंत्र (Saraswati Gayatri)",
+            devanagari: "ॐ वाग्देव्यै च विद्महे, कामराजाय धीमहि। तन्नो देवी प्रचोदयात्॥",
+            meaning: "विधि एवं भावना: अध्ययन, साधना अथवा शोध कार्य से पूर्व बौद्धिक सामर्थ्य के जागरण हेतु पाठ करें।",
+            mantraMeaning: "मंत्र अर्थ: हम वाणी की स्वामिनी भगवती वाग्देवी को जानते हैं, परम तेज का ध्यान करते हैं। वे विद्यादायिनी देवी हमारी प्रज्ञा को श्रेष्ठ मार्ग पर प्रेरित करें।"
+          },
+          {
+            title: "४. विद्यारम्भ प्रार्थना (Vidyarambha Prarthana)",
+            devanagari: "सरस्वति नमस्तुभ्यं वरदे कामरूपिणि। विद्यारम्भं करिष्यामि सिद्धिर्भवतु मे सदा॥",
+            meaning: "विधि एवं भावना: स्वाध्याय, अध्ययन अथवा नित्य कर्म के आरम्भ में सफलता हेतु माता से प्रार्थना करें।",
+            mantraMeaning: "मंत्र अर्थ: हे वरदायिनी, मनवांछित रूप धारण करने वाली माँ सरस्वती! आपको नमस्कार है। मैं विद्या का आरम्भ कर रहा हूँ, मुझे सदा सफलता प्राप्त हो।"
+          }
+        ]
+      },
+      surya_mantras: {
+        id: "surya_mantras",
+        name: "☀️ भगवान सूर्य देव मंत्र एवं स्तुति (Surya Mantras)",
+        desc: "आरोग्य, तेजस्विता, नेत्र-ज्योति एवं आत्मबल प्रदाता प्रत्यक्ष देवता सूर्य की उपासना",
+        steps: [
+          {
+            title: "१. सूर्य ध्यानम् (Surya Dhyanam)",
+            devanagari: "ध्येयः सदा सवितृमण्डलमध्यवर्ती, नारायणः सरसिजासनसन्निविष्टः। केयूरवान् मकरकुण्डलवान् किरीटी, हारी हिरण्मयवपुर्धृतशङ्खचक्रः॥",
+            meaning: "विधि एवं भावना: सूर्य मंडल के मध्य विराजमान, सुवर्ण के समान कांतिमान भगवान सूर्य-नारायण का ध्यान करें।",
+            mantraMeaning: "मंत्र अर्थ: सूर्य मंडल के केंद्र में कमल पर आसीन, कुंडल, मुकुट और हार धारण करने वाले, शंख-चक्रधारी हिरण्यमय स्वरूप श्री सूर्य नारायण का नित्य ध्यान करना चाहिए।"
+          },
+          {
+            title: "२. सूर्य गायत्री मंत्र (Surya Gayatri Mantra)",
+            devanagari: "ॐ आदित्याय विद्महे, प्रभाकराय धीमहि। तन्नः सूर्यः प्रचोदयात्॥",
+            meaning: "विधि एवं भावना: सूर्योदय के समय पूर्व दिशा की ओर मुख कर तेज, ऊर्जा और ओज की वृद्धि हेतु जप करें।",
+            mantraMeaning: "मंत्र अर्थ: हम अदिति-पुत्र भगवान आदित्य को जानते हैं, प्रभाकर का ध्यान करते हैं। वे सूर्यदेव हमारी बुद्धि और ओज को प्रकाशवान मार्ग पर प्रेरित करें।"
+          },
+          {
+            title: "३. आदित्य हृदय स्तोत्रम् सार (Aditya Hridaya Stotram)",
+            devanagari: "जयस्व जयभद्राय हर्यश्वाय नमो नमः। नमो नमः सहस्रांशो आदित्याय नमो नमः॥ नम उग्राय वीराय सारङ्गाय नमो नमः। नमः पद्मप्रबोधाय मार्ताण्डाय नमो नमः॥",
+            meaning: "विधि एवं भावना: महर्षि अगस्त्य द्वारा भगवान श्रीराम को प्रदत्त विजय स्तोत्र का पाठ कर समस्त शत्रुओं एवं रोगों पर विजय की प्रार्थना करें।",
+            mantraMeaning: "मंत्र अर्थ: जयस्वरूप, कल्याणप्रद, सहस्रों किरणों वाले भुवन भास्कर को नमस्कार है। उग्र, वीर, कमल को खिलाने वाले मार्तण्ड सूर्य को बारंबार नमन है।"
+          },
+          {
+            title: "४. द्वादश सूर्य नामावली (12 Surya Names)",
+            devanagari: "ॐ मित्राय नमः। ॐ रवये नमः। ॐ सूर्याय नमः। ॐ भानवे नमः। ॐ खगाय नमः। ॐ पूष्णे नमः। ॐ हिरण्यगर्भाय नमः। ॐ मरीचये नमः। ॐ आदित्याय नमः। ॐ सवित्रे नमः। ॐ अर्काय नमः। ॐ भास्कराय नमः॥",
+            meaning: "विधि एवं भावना: सूर्य नमस्कार या दैनिक अर्घ्यदान के समय भगवान सूर्य के बारह दिव्य नामों का श्रद्धापूर्वक स्मरण करें।",
+            mantraMeaning: "मंत्र अर्थ: सबके मित्र, प्रकाशक, प्रेरक, पोषक, सुवर्णमय तेज के आधार, समस्त सृष्टि को प्राण देने वाले सूर्य नारायण के बारह नामों को सादर नमस्कार।"
+          }
+        ]
+      },
+      shani_mantras: {
+        id: "shani_mantras",
+        name: "🪐 श्री शनिदेव मंत्र एवं स्तोत्र (Shani Mantras)",
+        desc: "न्याय के देवता, कर्मफलदाता, सूर्यपुत्र श्री शनिदेव के कष्ट-निवारक मंत्र",
+        steps: [
+          {
+            title: "१. शनि ध्यानम् (Shani Dhyanam)",
+            devanagari: "नीलाञ्जनसमाभासं रविपुत्रं यमाग्रजम्। छायामार्तण्डसम्भूतं तं नमामि शनैश्चरम्॥",
+            meaning: "विधि एवं भावना: दोनों हाथ जोड़कर नील मणि के समान कांति वाले, शांत एवं न्यायप्रिय शनिदेव का ध्यान करें।",
+            mantraMeaning: "मंत्र अर्थ: नीले अंजन के समान कांति वाले, सूर्यदेव के पुत्र, यमराज के बड़े भ्राता तथा माता छाया व मार्तण्ड से उत्पन्न भगवान शनैश्चर को मैं प्रणाम करता हूँ।"
+          },
+          {
+            title: "२. शनि बीज महामंत्र (Shani Beej Mantra)",
+            devanagari: "ॐ प्रां प्रीं प्रौं सः शनैश्चराय नमः॥ ॐ शं शनैश्चराय नमः॥",
+            meaning: "विधि एवं भावना: साढ़ेसाती, ढैय्या, मानसिक तनाव अथवा कठिन संघर्ष के समय मन को धैर्य व निष्ठा देने हेतु जप करें।",
+            mantraMeaning: "मंत्र अर्थ: समस्त पापों और कष्टों के निवारक, परम प्रतापी सूर्यपुत्र भगवान शनैश्चर को मेरा सादर नमन है।"
+          },
+          {
+            title: "३. शनि गायत्री मंत्र (Shani Gayatri)",
+            devanagari: "ॐ काकध्वजाय विद्महे, खड्गहस्ताय धीमहि। तन्नो मन्दः प्रचोदयात्॥",
+            meaning: "विधि एवं भावना: न्याय, संतुलन, अनुशासन और कर्म शुद्धि की भावना के साथ शनि गायत्री का जाप करें।",
+            mantraMeaning: "मंत्र अर्थ: जिनके ध्वज पर कौवा सुशोभित है, जो हाथ में खड्ग धारण करते हैं—वे मन्दगति भगवान शनिदेव हमारी बुद्धि को सन्मार्ग पर प्रेरित करें।"
+          },
+          {
+            title: "४. राजा दशरथ कृत शनि स्तोत्र सार (Dasharatha Shani Stotram)",
+            devanagari: "नमः कृष्णाय नीलाय शितिकण्ठनिभाय च। नमः कालाग्निरूपाय कृतान्ताय च वै नमः॥ नमो मन्दगतये तुभ्यं निस्त्रिंशाय नमोऽस्तु ते। तपसा दग्धदेहाय नित्यं योगरताय च॥",
+            meaning: "विधि एवं भावना: महाराजा दशरथ द्वारा रचित शनि स्तोत्र का पाठ कर जीवन के समस्त संकटों व पीड़ाओं से मुक्ति की प्रार्थना करें।",
+            mantraMeaning: "मंत्र अर्थ: कृष्ण वर्ण, नीले स्वरूप, कालाग्नि सदृश और तपस्या से देह को तपाने वाले, योग में नित्य लीन रहने वाले हे न्यायप्रिय शनिदेव! आपको नमस्कार है।"
+          }
+        ]
+      },
+      shiva_mantras: {
+        id: "shiva_mantras",
+        name: "🔱 देवाधिदेव श्री शिव मंत्र (Shiva Mantras)",
+        desc: "महामृत्युंजय, शिव पंचाक्षर, रुद्राष्टकम् एवं ज्योतिर्लिंग स्मरण",
+        steps: [
+          {
+            title: "१. द्वादश ज्योतिर्लिंग स्मरण (Dwadasha Jyotirlinga)",
+            devanagari: "सौराष्ट्रे सोमनाथं च श्रीशैले मल्लिकार्जुनम्। उज्जयिन्यां महाकालमोङ्कारममलेश्वरम्॥ परल्यां वैद्यनाथं च डाकिन्यां भीमशङ्करम्। सेतुबन्धे तु रामेशं नागेशं दारुकावने॥ वाराणस्यां तु विश्वेशं त्र्यम्बकं गौतमीतटे। हिमालये तु केदारं घुश्मेशं च शिवालये॥",
+            meaning: "विधि एवं भावना: भारत भूमि के द्वादश पावन ज्योतिर्लिंगों का स्मरण कर भगवान आशुतोष से कल्याण की प्रार्थना करें।",
+            mantraMeaning: "मंत्र अर्थ: सौराष्ट्र में सोमनाथ, श्रीशैल पर मल्लिकार्जुन, उज्जैन में महाकाल, ओंकारेश्वर में अमलेश्वर, परली में वैद्यनाथ, डाकिनी में भीमशंकर, सेतुबंध में रामेश्वर, दारुकावन में नागेश्वर, काशी में विश्वनाथ, गोदावरी तट पर त्र्यंबकेश्वर, हिमालय पर केदारनाथ और शिवालय में घुश्मेश्वर को मैं प्रणाम करता हूँ।"
+          },
+          {
+            title: "२. महामृत्युंजय महामंत्र (Maha Mrityunjaya Mahamantra)",
+            devanagari: "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्। उर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय मामृतात्॥",
+            meaning: "विधि एवं भावना: समस्त भय, असाध्य रोग, अकाल मृत्यु के निवारण तथा आरोग्य व आत्मबल की प्राप्ति हेतु जप करें।",
+            mantraMeaning: "मंत्र अर्थ: हम सुगंधित और जीवन-शक्ति को पुष्ट करने वाले त्रिनेत्रधारी शिव की वंदना करते हैं। जिस प्रकार पका फल डाल के बंधन से मुक्त हो जाता है, वैसे ही हम मृत्यु और बंधनों से मुक्त होकर अमरता की ओर बढ़ें।"
+          },
+          {
+            title: "३. शिव पंचाक्षर स्तोत्रम् (Shiva Panchakshara Stotram)",
+            devanagari: "नागेन्द्रहाराय त्रिलोचनाय, भस्माङ्गरागाय महेश्वराय। नित्याय शुद्धाय दिगम्बराय, तस्मै नकाराय नमः शिवाय॥ मन्दाकिनीसलिलचन्दनचर्चिताय, नन्दीश्वरप्रमथनाथमहेश्वराय। मन्दारपुष्पबहुपुष्पसुपूजिताय, तस्मै मकाराय नमः शिवाय॥",
+            meaning: "विधि एवं भावना: 'ॐ नमः शिवाय' के दिव्य पंचाक्षरों से सुसज्जित आदिगुरु भगवान शिव की स्तुति करें।",
+            mantraMeaning: "मंत्र अर्थ: जिनके कंठ में सर्पों का हार है, जो त्रिनेत्रधारी हैं, भस्म जिनका अंगराग है, जो नित्य, शुद्ध और दिगंबर हैं, उन 'न' कार स्वरूप भगवान शिव को मेरा नमस्कार है। जो गंगाजल और चन्दन से शोभित हैं, उन 'म' कार स्वरूप शिव को नमन है।"
+          },
+          {
+            title: "४. श्री रुद्राष्टकम् (Rudrashtakam - Namamisham)",
+            devanagari: "नमामीशमीशान निर्वाणरूपं, विभुं व्यापकं ब्रह्मवेदस्वरूपम्। निजं निर्गुणं निर्विकल्पं निरीहं, चिदाकाशमाकाशवासं भजेऽहम्॥ निराकारमोंकारमूलं तुरीयं, गिराज्ञानगोतीतमीशं गिरीशम्। करालं महाकालकालं कृपालं, गुणागारसंसारपारं नतोऽहम्॥",
+            meaning: "विधि एवं भावना: गोस्वामी तुलसीदास जी द्वारा रचित परम कल्याणकारी रुद्राष्टकम् का भक्तिपूर्वक पाठ करें।",
+            mantraMeaning: "मंत्र अर्थ: हे ईशान! मोक्ष स्वरूप, सर्वव्यापी, ब्रह्म और वेद स्वरूप प्रभु! मैं आपको नमन करता हूँ। अपने स्वरूप में स्थित, निर्गुण, निर्विकल्प, निष्काम, चिदाकाश स्वरूप भगवान शिव का मैं भजन करता हूँ।"
+          },
+          {
+            title: "५. शिव मानस पूजा सार (Shiva Manasa Puja)",
+            devanagari: "आत्मा त्वं गिरिजा मतिः सहचराः प्राणाः शरीरं गृहं, पूजा ते विषयोपभोगरचना निद्रा समाधिस्थितिः। सञ्चारः पदयोः प्रदक्षिणविधिः स्तोत्राणि सर्वा गिरो, यद्यत्कर्म करोमि तत्तदखिलं शम्भो तवाराधनम्॥",
+            meaning: "विधि एवं भावना: अपने संपूर्ण जीवन, दिनचर्या और कार्यों को भगवान शिव की पूजा के रूप में समर्पित करें।",
+            mantraMeaning: "मंत्र अर्थ: हे शम्भो! मेरी आत्मा आप हैं, मेरी बुद्धि माता पार्वती हैं, मेरे प्राण आपके गण हैं, मेरा शरीर आपका मंदिर है। मेरे समस्त भोग आपकी पूजा हैं, मेरी निद्रा समाधि है, मेरा चलना आपकी परिक्रमा है और मेरी समस्त वाणी आपकी स्तुति है।"
+          }
+        ]
+      },
+      vishnu_mantras: {
+        id: "vishnu_mantras",
+        name: "🌸 श्री विष्णु मंत्र (Vishnu Mantras)",
+        desc: "विष्णु ध्यान, द्वादशाक्षर महामंत्र, नारायण गायत्री एवं अच्युताष्टकम्",
+        steps: [
+          {
+            title: "१. श्री विष्णु ध्यानम् (Vishnu Dhyanam)",
+            devanagari: "शान्ताकारं भुजगशयनं पद्मनाभं सुरेशं, विश्वाधारं गगनसदृशं मेघवर्णं शुभाङ्गम्। लक्ष्मीकान्तं कमलनयनं योगिभिर्ध्यानगम्यम्, वन्दे विष्णुं भवभयहरं सर्वलोकैकनाथम्॥",
+            meaning: "विधि एवं भावना: शांत चित्त होकर भगवान श्री हरि विष्णु के शांत, नीले मेघ वर्ण और चतुर्भुज स्वरूप का ध्यान करें।",
+            mantraMeaning: "मंत्र अर्थ: जिनकी आकृति परम शांत है, जो शेषनाग पर शयन करते हैं, कमल नयन, योगियों द्वारा ध्यान में जानने योग्य, संसार के भय को हरने वाले भगवान विष्णु को मैं प्रणाम करता हूँ।"
+          },
+          {
+            title: "२. द्वादशाक्षर महामंत्र (Om Namo Bhagavate Vasudevaya)",
+            devanagari: "ॐ नमो भगवते वासुदेवाय॥ ॐ नमो भगवते वासुदेवाय॥ ॐ नमो भगवते वासुदेवाय॥",
+            meaning: "विधि एवं भावना: तुलसी की माला से अथवा करमाला से द्वादशाक्षर मंत्र का जाप करें। यह मुक्ति और अभय प्रदाता है।",
+            mantraMeaning: "मंत्र अर्थ: सर्वव्यापी, घट-घट में वास करने वाले, सच्चिदानंद स्वरूप परमब्रह्म भगवान वासुदेव को मेरा कोटि-कोटि नमन है।"
+          },
+          {
+            title: "३. मंगलाचरण (Shuklambaradharam)",
+            devanagari: "शुक्लाम्बरधरं विष्णुं शशिवर्णं चतुर्भुजम्। प्रसन्नवदनं ध्यायेत् सर्वविघ्नोपशान्तये॥ मङ्गलं भगवान् विष्णुः, मङ्गलं गरुडध्वजः। मङ्गलं पुण्डरीकाक्षो, मङ्गलाय तनो हरिः॥",
+            meaning: "विधि एवं भावना: समस्त शुभ कार्यों, पूजा-पाठ एवं दैनिक अनुष्ठान में सर्व-मंगल की कामना के साथ यह श्लोक पढ़ें।",
+            mantraMeaning: "मंत्र अर्थ: श्वेत वस्त्र धारण करने वाले, चंद्रमा के समान कांति वाले, चतुर्भुज, प्रसन्न मुख वाले भगवान विष्णु का समस्त विघ्नों की शांति के लिए ध्यान करें।"
+          },
+          {
+            title: "४. श्री नारायण गायत्री (Narayana Gayatri)",
+            devanagari: "ॐ नारायणाय विद्महे, वासुदेवाय धीमहि। तन्नो विष्णुः प्रचोदयात्॥",
+            meaning: "विधि एवं भावना: जीवन में सात्विक बुद्धि, शांति, तेजस्विता और धर्म-पालन की शक्ति हेतु पाठ करें।",
+            mantraMeaning: "मंत्र अर्थ: हम परब्रह्म नारायण को जानते हैं, उन सर्वव्यापी वासुदेव का ध्यान करते हैं। वे भगवान विष्णु हमारी बुद्धि को सन्मार्ग पर प्रेरित करें।"
+          },
+          {
+            title: "५. अच्युताष्टकम् प्रारंभ (Achyutam Keshavam)",
+            devanagari: "अच्युतं केशवं रामनारायणं, कृष्णदामोदरं वासुदेवं हरिम्। श्रीधरं माधवं गोपिकावल्लभं, जानकीनायकं रामचंद्रं भजे॥",
+            meaning: "विधि एवं भावना: प्रभु के विभिन्न मधुर नामों का उच्चारण करते हुए प्रेम और समर्पण भाव से स्तुति करें।",
+            mantraMeaning: "मंत्र अर्थ: जो अच्युत, केशव, राम-नारायण, कृष्ण-दामोदर, वासुदेव-हरि, श्रीधर, माधव और जानकीनायक रामचंद्र हैं—उनका मैं निरंतर भजन करता हूँ।"
+          },
+          {
+            title: "६. शरणागति एवं समर्पण श्लोक (Surrender to Vishnu)",
+            devanagari: "कायेन वाचा मनसेन्द्रियैर्वा, बुद्ध्यात्मना वा प्रकृतिस्वभावात्। करोमि यद्यत् सकलं परस्मै, नारायणायेति समर्पयामि॥",
+            meaning: "विधि एवं भावना: दिनभर किए गए समस्त कर्मों को भगवान नारायण के श्रीचरणों में निष्काम भाव से समर्पित कर दें।",
+            mantraMeaning: "मंत्र अर्थ: शरीर, वाणी, मन, इंद्रियों अथवा स्वभाव के वश होकर मैं जो कुछ भी करता हूँ, वह सब मैं परमपिता श्री नारायण के चरणों में समर्पित करता हूँ।"
+          }
+        ]
+      },
+      krishna_mantras: {
+        id: "krishna_mantras",
+        name: "🪈 श्री कृष्ण मंत्र (Krishna Mantras)",
+        desc: "कृष्ण वंदना, हरे कृष्ण महामंत्र, क्लेश नाशन एवं बाल मुकुंद स्तुति",
+        steps: [
+          {
+            title: "१. श्री कृष्ण वंदना (Krishna Vandana - Jagadguru)",
+            devanagari: "वसुदेवसुतं देवं, कंसचाणूरमर्दनम्। देवकीपरमानन्दं, कृष्णं वन्दे जगद्गुरुम्॥",
+            meaning: "विधि एवं भावना: हाथ जोड़कर जगद्गुरु भगवान श्रीकृष्ण के नयनाभिराम रूप का स्मरण करें।",
+            mantraMeaning: "मंत्र अर्थ: वासुदेव जी के दिव्य पुत्र, कंस और चाणूर का संहार करने वाले, माता देवकी को परम आनंद देने वाले जगद्गुरु श्रीकृष्ण को मैं वंदन करता हूँ।"
+          },
+          {
+            title: "२. हरे कृष्ण महामंत्र (Hare Krishna Mahamantra)",
+            devanagari: "हरे कृष्ण हरे कृष्ण, कृष्ण कृष्ण हरे हरे। हरे राम हरे राम, राम राम हरे हरे॥",
+            meaning: "विधि एवं भावना: कलियुग में समस्त संशयों और दुःखों का नाश करने वाले महामंत्र का भावपूर्ण संकीर्तन करें।",
+            mantraMeaning: "मंत्र अर्थ: हे सर्व-आकर्षक भगवान कृष्ण! हे आनंदमय भगवान राम! हे प्रभु की अंतरंगा शक्ति! आप मुझे अपनी निष्काम प्रेमाभक्ति में नियुक्त कीजिए।"
+          },
+          {
+            title: "३. श्री कृष्ण प्रणाम मंत्र (Krishna Pranam Mantra)",
+            devanagari: "हे कृष्ण करुणासिन्धो, दीनबन्धो जगत्पते। गोपेश गोपिकाकान्त, राधाकान्त नमोऽस्तु ते॥",
+            meaning: "विधि एवं भावना: दीनभाव से भगवान के असीम करुणा सागर स्वरूप के सम्मुख नतमस्तक होकर प्रणाम करें।",
+            mantraMeaning: "मंत्र अर्थ: हे श्रीकृष्ण! आप करुणा के सागर, दीनों के बंधु, जगत के स्वामी, गोपों के ईश और श्री राधारानी के कांत हैं! आपको मेरा बारंबार नमस्कार है।"
+          },
+          {
+            title: "४. क्लेश नाशन स्तुति (Klesh Nashan Mantra)",
+            devanagari: "कृष्णाय वासुदेवाय, हरये परमात्मने। प्रणतक्लेशनाशाय, गोविंदाय नमो नमः॥",
+            meaning: "विधि एवं भावना: मानसिक संताप, तनाव और पारिवारिक क्लेशों से मुक्ति हेतु इस मंत्र का स्मरण करें।",
+            mantraMeaning: "मंत्र अर्थ: भगवान श्रीकृष्ण, भक्तों के कष्टों को हरने वाले परमात्मा, शरणागतों के समस्त क्लेशों का नाश करने वाले श्री गोविंद को मेरा बारंबार नमन है।"
+          },
+          {
+            title: "५. बाल मुकुंद ध्यान (Baal Mukunda Stuti)",
+            devanagari: "करारविन्देन पदारविन्दं, मुखारविन्दे विनिवेशयन्तम्। वटस्य पत्रस्य पुटे शयानं, बालं मुकुन्दं मनसा स्मरामि॥",
+            meaning: "विधि एवं भावना: वटवृक्ष के पत्ते पर शयन कर रहे नटखट और मनोहर बाल-कृष्ण के चरणों का मन में ध्यान करें।",
+            mantraMeaning: "मंत्र अर्थ: जो अपने कर-कमलों से अपने चरण-कमल को पकड़कर मुख-कमल में डाल रहे हैं, उन दिव्य बाल मुकुंद श्रीकृष्ण का मैं मन ही मन स्मरण करता हूँ।"
+          },
+          {
+            title: "६. मधुराष्टकम् सार (Madhurashtakam)",
+            devanagari: "अधरं मधुरं वदनं मधुरं, नयनं मधुरं हसितं मधुरम्। हृदयं मधुरं गमनं मधुरं, मधुराधिपतेरखिलं मधुरम्॥",
+            meaning: "विधि एवं भावना: भगवान श्रीकृष्ण के सर्वांग मधुर एवं आनंदमय स्वरूप का कीर्तन करें।",
+            mantraMeaning: "मंत्र अर्थ: भगवान श्रीकृष्ण के होंठ मधुर हैं, मुख मधुर है, नयन मधुर हैं, मुस्कान मधुर है, हृदय मधुर है और चाल भी मधुर है। उन मधुराधिपति का सब कुछ मधुर है।"
+          }
+        ]
+      },
+      hanuman_chalisa: {
+        id: "hanuman_chalisa",
+        name: "🚩 श्री हनुमान चालीसा (Hanuman Chalisa)",
+        desc: "संकटमोचन श्री हनुमान चालीसा: दोहा, संपूर्ण चालीस चौपाइयाँ एवं समापन दोहा",
+        steps: [
+          {
+            title: "आरम्भिक दोहा (Introductory Dohas)",
+            devanagari: "श्रीगुरु चरन सरोज रज, निज मनु मुकुरु सुधारि। बरनऊँ रघुबर बिमल जसु, जो दायकु फल चारि॥ बुद्धिहीन तनु जानिके, सुमिरौं पवन-कुमार। बल बुधि बिद्या देहु मोहिं, हरहु कलेस बिकार॥",
+            meaning: "पाठ निर्देश एवं भावना: दोनों हाथ जोड़कर संकटमोचन हनुमान जी और श्री गुरुदेव के चरणों का ध्यान करें।",
+            mantraMeaning: "दोहा अर्थ: श्री गुरु के चरण कमलों की धूलि से मन रूपी दर्पण को पवित्र करके, मैं श्री रघुवीर के निर्मल यश का गान करता हूँ। हे पवनपुत्र! मुझे बल, बुद्धि और विद्या प्रदान करें एवं समस्त क्लेशों को हर लें।"
+          },
+          {
+            title: "चौपाई १ - ४ (Chaupai 1-4: Swaroop & Mahima)",
+            devanagari: "जय हनुमान ज्ञान गुन सागर। जय कपीस तिहुँ लोक उजागर॥ रामदूत अतुलित बल धामा। अंजनि-पुत्र पवनसुत नामा॥ महाबीर बिक्रम बजरंगी। कुमति निवार सुमति के संगी॥ कंचन बरन बिराज सुबेसा। कानन कुंडल कुंचित केसा॥",
+            meaning: "भावना: श्री हनुमान जी के तेजस्वी रूप और असीम ज्ञान-सागर का मन में दर्शन करें।",
+            mantraMeaning: "अर्थ: हे ज्ञान व गुणों के अगाध सागर हनुमान जी, आपकी जय हो! आप श्रीराम के अद्वितीय दूत और अतुलित बल के धाम हैं। आप दुर्बुद्धि को दूर करने वाले और सद्बुद्धि के साथी हैं।"
+          },
+          {
+            title: "चौपाई ५ - ८ (Chaupai 5-8: Seva & Shaurya)",
+            devanagari: "हाथ बज्र औ ध्वजा बिराजै। काँधे मूँज जनेऊ साजै॥ संकर सुवन केसरीनंदन। तेज प्रताप महा जग बंदन॥ बिद्यावान गुनी अति चातुर। राम काज करिबे को आतुर॥ प्रभु चरित्र सुनिबे को रसिया। राम लखन सीता मन बसिया॥",
+            meaning: "भावना: भगवान राम के प्रति हनुमान जी के अनन्य समर्पण और सेवा-भाव को धारण करें।",
+            mantraMeaning: "अर्थ: आपके हाथों में वज्र और ध्वजा है, कंधे पर जनेऊ सुशोभित है। आप शंकर सुवन, केसरी नंदन हैं। आप परम चतुर हैं, जो सदा राम-काज करने को आतुर रहते हैं।"
+          },
+          {
+            title: "चौपाई ९ - १२ (Chaupai 9-12: Lanka Dahan & Sanjivani)",
+            devanagari: "सूक्ष्म रूप धरि सियहिं दिखावा। बिकट रूप धरि लंक जरावा॥ भीम रूप धरि असुर सँहारे। रामचंद्र के काज संवारे॥ लाय सजीवन लखन जियाये। श्रीरघुबीर हरषि उर लाये॥ रघुपति कीन्ही बहुत बड़ाई। तुम मम प्रिय भरतहि सम भाई॥",
+            meaning: "भावना: संकट के समय विवेक और शक्ति के संतुलन का स्मरण करें।",
+            mantraMeaning: "अर्थ: आपने सूक्ष्म रूप धरकर सीता जी को दर्शन दिया, विकराल रूप से लंका दहन किया, संजीवनी बूटी लाकर लक्ष्मण जी को जिलाया, जिससे श्रीराम ने आपको हृदय से लगा लिया।"
+          },
+          {
+            title: "चौपाई १३ - १६ (Chaupai 13-16: Stuti & Kripa)",
+            devanagari: "सहस बदन तुम्हरो जस गावैं। अस कहि श्रीपति कंठ लगावैं॥ सनकादिक ब्रह्मादि मुनीसा। नारद सारद सहित अहीसा॥ जम कुबेर दिगपाल जहाँ ते। कबि कोबिद कहि सके कहाँ ते॥ तुम उपकार सुग्रीवहिं कीन्हा। राम मिलाय राज पद दीन्हा॥",
+            meaning: "भावना: प्रभु कृपा और संतों-देवताओं द्वारा वंदित हनुमान जी के यश का गान करें।",
+            mantraMeaning: "अर्थ: शेषनाग, सनकादि ऋषि, ब्रह्मादि देवता, नारद और सरस्वती सभी आपका गुणगान करते हैं। आपने सुग्रीव जी को श्रीराम से मिलाकर राजपद दिलाया।"
+          },
+          {
+            title: "चौपाई १७ - २० (Chaupai 17-20: Vibhishan & Surya Parakram)",
+            devanagari: "तुम्हरो मंत्र बिभीषन माना। लंकेस्वर भए सब जग जाना॥ जुग सहस्र जोजन पर भानू। लील्यो ताहि मधुर फल जानू॥ प्रभु मुद्रिका मेलि मुख माहीं। जलधि लाँघि गये अचरज नाहीं॥ दुर्गम काज जगत के जेते। सुगम अनुग्रह तुम्हरे तेते॥",
+            meaning: "भावना: जीवन के सभी कठिन और असंभव प्रतीत होने वाले कार्यों में हनुमान जी की कृपा का अनुभव करें।",
+            mantraMeaning: "अर्थ: आपकी सलाह से विभीषण लंकापति बने। सहस्रों योजन दूर स्थित सूर्य को आपने मधुर फल समझकर मुख में रख लिया। संसार के समस्त दुर्गम कार्य आपकी कृपा से सुगम हो जाते हैं।"
+          },
+          {
+            title: "चौपाई २१ - २४ (Chaupai 21-24: Dwarapal & Sharanagati)",
+            devanagari: "राम दुआरे तुम रखवारे। होत न आज्ञा बिनु पैसारे॥ सब सुख लहै तुम्हारी सरना। तुम रच्छक काहू को डर ना॥ आपन तेज सम्हारो आपै। तीनों लोक हाँक तें काँपै॥ भूत पिसाच निकट नहिं आवै। महाबीर जब नाम सुनावै॥",
+            meaning: "भावना: अभय और सुरक्षा का भाव; समस्त भयों और नकारात्मक ऊर्जाओं से मुक्ति की प्रार्थना।",
+            mantraMeaning: "अर्थ: आप श्रीराम के द्वारपाल हैं। आपकी शरण में आने वाले को समस्त सुख प्राप्त होते हैं। हे महावीर! आपका नाम स्मरण करने मात्र से भूत-पिशाच निकट भी नहीं आ सकते।"
+          },
+          {
+            title: "चौपाई २५ - २८ (Chaupai 25-28: Rog Haran & Ashta Siddhi)",
+            devanagari: "नासै रोग हरै सब पीरा। जपत निरंतर हनुमत बीरा॥ संकट तें हनुमान छुड़ावै। मन क्रम बचन ध्यान जो लावै॥ सब पर राम तपस्वी राजा। तिन के काज सकल तुम साजा॥ और मनोरथ जो कोई लावै। सोइ अमित जीवन फल पावै॥",
+            meaning: "भावना: स्वास्थ्य, मानसिक शांति और शुद्ध संकल्प की सिद्धि की प्रार्थना करें।",
+            mantraMeaning: "अर्थ: निरंतर नाम जप करने से समस्त रोग व पीड़ाएं मिट जाती हैं। जो मन, कर्म और वचन से हनुमान जी का ध्यान करता है, वे उसे हर संकट से मुक्त कर देते हैं।"
+          },
+          {
+            title: "चौपाई २९ - ३२ (Chaupai 29-32: Chaaron Yug Partap)",
+            devanagari: "चारों जुग परताप तुम्हारा। है परसिद्ध जगत उजियारा॥ साधु-संत के तुम रखवारे। असुर निकंदन राम दुलारे॥ अष्ट सिद्धि नौ निधि के दाता। अस बर दीन जानकी माता॥ राम रसायन तुम्हरे पासा। सदा रहो रघुपति के दासा॥",
+            meaning: "भावना: अष्ट सिद्धि, नव निधि और भगवत्-भक्ति के अमृत की प्राप्ति का भाव।",
+            mantraMeaning: "अर्थ: चारों युगों में आपका प्रताप फैला हुआ है। माता जानकी के वरदान से आप आठों सिद्धियां और नौ निधियां देने वाले हैं। आपके पास राम-नाम रूपी अनमोल रसायन है।"
+          },
+          {
+            title: "चौपाई ३३ - ३६ (Chaupai 33-36: Mukti & Janm-Janm Bhakti)",
+            devanagari: "तुम्हरे भजन राम को पावै। जनम-जनम के दुख बिसरावै॥ अंत काल रघुबर पुर जाई। जहाँ जन्म हरि-भक्त कहाई॥ और देवता चित्त न धरई। हनुमत सेइ सर्ब सुख करई॥ संकट कटै मिटै सब पीरा। जो सुमिरै हनुमत बलबीरा॥",
+            meaning: "भावना: अनन्य निष्ठा और भक्ति से परमात्मा की प्राप्ति का संकल्प।",
+            mantraMeaning: "अर्थ: आपके भजन से भक्त श्रीराम को प्राप्त कर लेता है और जन्म-जन्मांतरों के दुःखों को भूल जाता है। केवल हनुमान जी की सेवा करने से समस्त सुख प्राप्त हो जाते हैं।"
+          },
+          {
+            title: "चौपाई ३७ - ४० एवं समापन दोहा (Concluding Chaupai & Doha)",
+            devanagari: "जै जै जै हनुमान गोसाईं। कृपा करहु गुरुदेव की नाईं॥ जो सत बार पाठ कर कोई। छूटहि बंदि महा सुख होई॥ जो यह पढ़ै हनुमान चलीसा। होय सिद्धि साखी गौरीसा॥ तुलसीदास सदा हरि चेरा। कीजै नाथ हृदय मँह डेरा॥ पवनतनय संकट हरन, मंगल मूरति रूप। राम लखन सीता सहित, हृदय बसहु सुर भूप॥",
+            meaning: "भावना: श्री सीता-राम एवं लक्ष्मण जी सहित पवनपुत्र हनुमान जी को हृदय-सिंहासन पर विराजमान करें।",
+            mantraMeaning: "अर्थ: हे स्वामी हनुमान जी! आप मुझ पर गुरुदेव के समान कृपा करें। जो इस चालीसा का सौ बार पाठ करता है, वह बंधनों से छूट जाता है। हे संकटमोचन! आप सीता-राम सहित मेरे हृदय में वास करें।"
+          }
+        ]
+      },
+      vedic: {
+        id: "vedic",
+        name: "🕊️ वैदिक शांति पाठ (Vedic Shanti)",
+        desc: "यजुर्वेद शांति मंत्र, उपनिषद् प्रार्थना एवं सर्वकल्याण शांति पाठ",
+        steps: [
+          {
+            title: "चरण १: बृहदारण्यक / यजुर्वेद शांति मंत्र (Dyau Shanti)",
+            devanagari: "ॐ द्यौः शान्तिरन्तरिक्षं शान्तिः, पृथिवी शान्तिरापः शान्तिरोषधयः शान्तिः। वनस्पतयः शान्तिर्विश्वेदेवाः शान्तिर्ब्रह्म शान्तिः, सर्वं शान्तिः, शान्तिरेव शान्तिः, सा मा शान्तिरेधि॥ ॐ शान्तिः शान्तिः शान्तिः॥",
+            meaning: "विधि एवं भावना: ब्रह्मांड के समस्त तत्वों—द्युलोक, अंतरिक्ष, पृथ्वी, जल, औषधि और वनस्पतियों में शांति की प्रार्थना करें।",
+            mantraMeaning: "मंत्र अर्थ: द्युलोक शांत हो, अंतरिक्ष शांत हो, पृथ्वी शांत हो, जल शांत हो, औषधियां व वनस्पतियां शांत हों। समस्त विश्व, ब्रह्म और सब कुछ शांत हो। वह परम शांति मुझे भी प्राप्त हो।"
+          },
+          {
+            title: "चरण २: ॐ असतो मा सद्गमय (Lead to Light)",
+            devanagari: "ॐ असतो मा सद्गमय। तमसो मा ज्योतिर्गमय। मृत्योर्मा अमृतं गमय॥ ॐ शान्तिः शान्तिः शान्तिः॥",
+            meaning: "विधि एवं भावना: असत्य से सत्य की ओर, अंधकार से दिव्य प्रकाश की ओर तथा मृत्यु से अमरत्व की ओर अग्रसर होने का भाव।",
+            mantraMeaning: "मंत्र अर्थ: हे परमात्मा! मुझे असत्य से सत्य की ओर ले चलें। अज्ञान के अंधकार से ज्ञान के दिव्य प्रकाश की ओर ले चलें। मृत्यु के भय से अमरत्व की ओर ले चलें।"
+          },
+          {
+            title: "चरण ३: सर्वकल्याण प्रार्थना (Universal Well-being)",
+            devanagari: "सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः। सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत्॥",
+            meaning: "विधि एवं भावना: चराचर जगत के समस्त प्राणियों के सुख, उत्तम स्वास्थ्य और मंगल की भावना करें।",
+            mantraMeaning: "मंत्र अर्थ: समस्त संसार के प्राणी सुखी हों, सब निरोगी हों, सब शुभ और कल्याण देखें तथा कोई भी प्राणी दुःख का भागी न बने।"
+          }
+        ]
+      }
+    };
+
+    const STATE_KEY = "havan_sutra_state_v9";
+
+    let state = {
+      currentPreset: "gayatri_havan",
+      customPresets: {},
+      currentStepIndex: 0,
+      speechRate: 0.88,
+      speechPitch: 1.00,
+      selectedVoiceId: "cloud_hi", // Highly reliable default for Linux/Android/Desktop
+      autoAdvance: true,
+      explainEnabled: true,
+      enableChime: true,
+      ahutiRepeatEnabled: true,
+      ahutiCount: 1
+    };
+
+    function loadState() {
+      try {
+        const saved = localStorage.getItem(STATE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          state = { ...state, ...parsed };
+        }
+      } catch (e) {
+        console.warn("Storage load error", e);
+      }
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STATE_KEY, JSON.stringify(state));
+      } catch (e) {
+        console.warn("Storage save error", e);
+      }
+    }
+
+    class AudioBell {
+      constructor() {
+        this.ctx = null;
+      }
+
+      init() {
+        if (!this.ctx) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (AudioContextClass) {
+            this.ctx = new AudioContextClass();
+          }
+        }
+        if (this.ctx && this.ctx.state === "suspended") {
+          this.ctx.resume();
+        }
+      }
+
+      playChime(frequency = 528) {
+        try {
+          this.init();
+          if (!this.ctx) return;
+
+          const now = this.ctx.currentTime;
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+
+          osc.type = "sine";
+          osc.frequency.setValueAtTime(frequency, now);
+
+          const osc2 = this.ctx.createOscillator();
+          const gain2 = this.ctx.createGain();
+          osc2.type = "sine";
+          osc2.frequency.setValueAtTime(frequency * 2.76, now);
+
+          gain.gain.setValueAtTime(0, now);
+          gain2.gain.setValueAtTime(0, now);
+          gain.gain.linearRampToValueAtTime(0.22, now + 0.03);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.6);
+
+          gain2.gain.linearRampToValueAtTime(0.06, now + 0.02);
+          gain2.gain.exponentialRampToValueAtTime(0.0001, now + 1.1);
+
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc2.connect(gain2);
+          gain2.connect(this.ctx.destination);
+
+          osc.start(now);
+          osc2.start(now);
+          osc.stop(now + 1.65);
+          osc2.stop(now + 1.15);
+        } catch (err) {
+          console.warn("Audio chime notice:", err);
+        }
+      }
+    }
+
+    const bellPlayer = new AudioBell();
+
+    function sanitizeForHindiTTS(text) {
+      if (!text) return "";
+      return text
+        .replace(/ॐ/g, "ओम् ")
+        .replace(/[\u0964\u0965\u007C\u00A6\u0970]+/g, ", ")
+        .replace(/[\u0951\u0952\u0953\u0954\u093D]/g, "")
+        .replace(/[\u200B-\u200D\uFEFF]/g, "")
+        .replace(/[()\[\]{}"'“”‘’]/g, " ")
+        .replace(/[\-\:;!]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function devanagariToPhoneticLatin(text) {
+      if (!text) return "";
+      const consonants = {
+        'क':'k','ख':'kh','ग':'g','घ':'gh','ङ':'ng',
+        'च':'ch','छ':'chh','ज':'j','झ':'jh','ञ':'ny',
+        'ट':'t','ठ':'th','ड':'d','ढ':'dh','ण':'n',
+        'त':'t','थ':'th','द':'d','ध':'dh','न':'n',
+        'प':'p','फ':'ph','ब':'b','भ':'bh','म':'m',
+        'य':'y','र':'r','ल':'l','व':'v',
+        'श':'sh','ष':'sh','स':'s','ह':'h'
+      };
+      const vowels = {
+        'अ':'a','आ':'aa','इ':'i','ई':'ee','उ':'u','ऊ':'oo',
+        'ऋ':'ri','ए':'e','ऐ':'ai','ओ':'o','औ':'au'
+      };
+      const matras = {
+        'ा':'aa','ि':'i','ी':'ee','ु':'u','ू':'oo',
+        'ृ':'ri','े':'e','ै':'ai','ो':'o','ौ':'au'
+      };
+      let out = "";
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (ch === 'ॐ') { out += "Om "; continue; }
+        if (ch === '।' || ch === '॥' || ch === ',') { out += ", "; continue; }
+        if (ch === ' ' || ch === '\n') { out += " "; continue; }
+        if (vowels[ch]) { out += vowels[ch]; continue; }
+        if (consonants[ch]) {
+          const next = text[i + 1];
+          if (next === '्') {
+            out += consonants[ch];
+            i++;
+          } else if (matras[next]) {
+            out += consonants[ch] + matras[next];
+            i++;
+          } else {
+            out += consonants[ch] + 'a';
+          }
+          continue;
+        }
+        if (ch === 'ं' || ch === 'ँ') { out += 'm'; continue; }
+        if (ch === 'ः') { out += 'h'; continue; }
+        if (matras[ch]) { out += matras[ch]; continue; }
+        if (ch !== '्' && ch !== 'ऽ') { out += ch; }
+      }
+      return out.replace(/\s+/g, ' ').trim();
+    }
+
+    window.__ttsActiveUtterances = [];
+
+    class SpeechController {
+      constructor() {
+        this.synth = typeof window !== 'undefined' ? window.speechSynthesis : null;
+        this.voices = [];
+        this.isSpeaking = false;
+        this.onWordBoundary = null;
+        this.onEndCallback = null;
+        this.currentUtterance = null;
+        this.activeChunks = [];
+        this.chunkIndex = 0;
+        this.failedVoiceURIs = new Set();
+        this.fallbackLevel = 0;
+        this.cloudAudio = null;
+      }
+
+      initVoices() {
+        if (!this.synth) {
+          renderVoiceOptions();
+          return;
+        }
+
+        const update = () => {
+          const loaded = this.synth.getVoices() || [];
+          this.voices = loaded;
+          renderVoiceOptions();
+        };
+
+        update();
+        if (this.synth.onvoiceschanged !== undefined) {
+          this.synth.onvoiceschanged = update;
+        }
+        setTimeout(update, 120);
+        setTimeout(update, 400);
+        setTimeout(update, 1200);
+      }
+
+      matchesAllowedTag(voice) {
+        if (!voice) return false;
+        const lang = (voice.lang || "").toLowerCase();
+        const name = (voice.name || "").toLowerCase();
+        const uri = (voice.voiceURI || "").toLowerCase();
+        const combined = `${lang} ${name} ${uri}`;
+        return /hi[-_]in/i.test(combined) || /sa[-_]in/i.test(combined) || lang.startsWith("hi") || lang.startsWith("sa");
+      }
+
+      isSaIn(voice) {
+        if (!voice) return false;
+        const combined = `${voice.voiceURI} ${voice.name} ${voice.lang}`.toLowerCase();
+        return combined.includes("sa_in") || combined.includes("sa-in") || combined.includes("san_in") || combined.includes("san-in");
+      }
+
+      isLatinVoice(voice) {
+        if (!voice) return false;
+        const combined = `${voice.voiceURI} ${voice.name} ${voice.lang}`.toLowerCase();
+        return combined.includes("latn") || combined.includes("#latn");
+      }
+
+      getVoiceByURI(uri) {
+        if (!this.voices || this.voices.length === 0) {
+          this.voices = this.synth ? (this.synth.getVoices() || []) : [];
+        }
+        return this.voices.find(v => v.voiceURI === uri);
+      }
+
+      getDefaultSaOrHiVoice(preferHindi = false) {
+        if (!this.voices || this.voices.length === 0) {
+          this.voices = this.synth ? (this.synth.getVoices() || []) : [];
+        }
+
+        const usableVoices = this.voices.filter(v => !this.failedVoiceURIs.has(v.voiceURI));
+        const allowed = usableVoices.filter(v => this.matchesAllowedTag(v));
+
+        if (preferHindi) {
+          const firstHindi = allowed.find(v => !this.isSaIn(v) && !this.isLatinVoice(v));
+          if (firstHindi) return firstHindi;
+          const anyHindi = allowed.find(v => !this.isSaIn(v));
+          if (anyHindi) return anyHindi;
+        }
+
+        if (allowed.length > 0) {
+          if (!preferHindi) {
+            const firstSaIn = allowed.find(v => this.isSaIn(v));
+            if (firstSaIn) return firstSaIn;
+          }
+          const firstHi = allowed.find(v => !this.isLatinVoice(v));
+          if (firstHi) return firstHi;
+          return allowed[0];
+        }
+
+        return usableVoices.find(v => v.default) || usableVoices[0] || null;
+      }
+
+      splitIntoPhrases(text) {
+        if (!text) return [];
+        const raw = text.split(/[\n।॥;]+/);
+        const chunks = [];
+        for (const r of raw) {
+          const trimmed = r.trim();
+          if (!trimmed) continue;
+          if (trimmed.length > 120) {
+            const sub = trimmed.split(/[,]+/);
+            for (const s of sub) {
+              if (s.trim()) chunks.push(s.trim());
+            }
+          } else {
+            chunks.push(trimmed);
+          }
+        }
+        return chunks.length > 0 ? chunks : [text];
+      }
+
+      /* Cloud Audio Streamer: Guarantees speech output on Linux Brave or systems without local TTS */
+      playCloudStream(text, options = {}) {
+        this.stop();
+        this.isSpeaking = true;
+        updatePlaybackUI(true);
+
+        const clean = sanitizeForHindiTTS(text);
+        if (!clean) {
+          this.stop();
+          if (this.onEndCallback) this.onEndCallback();
+          return;
+        }
+
+        const phrases = this.splitIntoPhrases(clean);
+        let cur = 0;
+
+        const playNextCloudPhrase = () => {
+          if (cur >= phrases.length) {
+            this.isSpeaking = false;
+            updatePlaybackUI(false);
+            if (this.onEndCallback) this.onEndCallback();
+            return;
+          }
+
+          const phrase = phrases[cur];
+          const langCode = options.voiceURI === "cloud_sa" ? "hi" : "hi";
+          const enc = encodeURIComponent(phrase.slice(0, 180));
+          const streamUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${langCode}&client=tw-ob&q=${enc}`;
+
+          if (this.cloudAudio) {
+            this.cloudAudio.pause();
+            this.cloudAudio = null;
+          }
+
+          const audio = new Audio(streamUrl);
+          this.cloudAudio = audio;
+          audio.playbackRate = Math.max(0.7, Math.min(1.4, options.rate || state.speechRate || 0.88));
+
+          audio.onplay = () => {
+            if (cur === 0 && options.onStart) options.onStart();
+          };
+
+          audio.onended = () => {
+            cur++;
+            playNextCloudPhrase();
+          };
+
+          audio.onerror = () => {
+            // If cloud stream fails, attempt standard system synthesis
+            console.warn("Cloud audio fallback to native synthesis");
+            cur++;
+            if (cur < phrases.length) {
+              playNextCloudPhrase();
+            } else {
+              this.stop();
+              if (this.onEndCallback) this.onEndCallback();
+            }
+          };
+
+          audio.play().catch(e => {
+            console.warn("Cloud stream play prevented:", e);
+            this.stop();
+          });
+        };
+
+        playNextCloudPhrase();
+      }
+
+      speak(text, options = {}) {
+        // If Cloud Audio mode is explicitly chosen or if system has zero voices (e.g. Linux Brave without speech daemon):
+        if (options.voiceURI === "cloud_hi" || options.voiceURI === "cloud_sa" || !this.synth || (this.voices.length === 0 && (!this.synth || !this.synth.getVoices().length))) {
+          this.playCloudStream(text, options);
+          return;
+        }
+
+        this.fallbackLevel = 0;
+        const rawChunks = options.singleUtterance ? [text] : this.splitIntoPhrases(text);
+        this.activeChunks = rawChunks.filter(c => {
+          const clean = sanitizeForHindiTTS(c);
+          return clean && clean.replace(/[,.\s]/g, '').length > 0;
+        });
+
+        if (this.activeChunks.length === 0) {
+          if (options.onEnd) options.onEnd();
+          return;
+        }
+
+        this.chunkIndex = 0;
+        this.isSpeaking = true;
+        updatePlaybackUI(true);
+
+        const speakNextChunk = () => {
+          if (this.chunkIndex >= this.activeChunks.length) {
+            this.isSpeaking = false;
+            this.currentUtterance = null;
+            window.__ttsActiveUtterances = [];
+            updatePlaybackUI(false);
+            if (this.onEndCallback) this.onEndCallback();
+            return;
+          }
+
+          const currentText = this.activeChunks[this.chunkIndex];
+          const cleanText = sanitizeForHindiTTS(currentText);
+
+          if (!cleanText || cleanText.replace(/[,.\s]/g, '').length === 0) {
+            this.chunkIndex++;
+            speakNextChunk();
+            return;
+          }
+
+          try {
+            if (this.synth.paused) {
+              this.synth.resume();
+            }
+          } catch (e) {}
+
+          let chosenVoice = null;
+          let safeLang = "hi-IN";
+
+          if (options.preferHindi) {
+            chosenVoice = this.getDefaultSaOrHiVoice(true);
+            safeLang = "hi-IN";
+          } else if (this.fallbackLevel === 0) {
+            if (options.voiceURI && !this.failedVoiceURIs.has(options.voiceURI) && !options.voiceURI.startsWith("cloud_")) {
+              chosenVoice = this.getVoiceByURI(options.voiceURI);
+            }
+            if (!chosenVoice) {
+              chosenVoice = this.getDefaultSaOrHiVoice(false);
+            }
+          } else if (this.fallbackLevel === 1) {
+            chosenVoice = this.getDefaultSaOrHiVoice(true);
+            safeLang = "hi-IN";
+          } else {
+            chosenVoice = null;
+            safeLang = "hi-IN";
+          }
+
+          if (chosenVoice) {
+            const langCode = (chosenVoice.lang || "").toLowerCase();
+            if (langCode.startsWith("sa")) {
+              safeLang = "sa-IN";
+            } else {
+              safeLang = "hi-IN";
+            }
+          }
+
+          let textForVoice = cleanText;
+          if (chosenVoice && this.isLatinVoice(chosenVoice)) {
+            textForVoice = devanagariToPhoneticLatin(cleanText) || cleanText;
+          }
+
+          const utterance = new SpeechSynthesisUtterance(textForVoice);
+          this.currentUtterance = utterance;
+          window.__ttsActiveUtterances = [utterance];
+
+          if (this.fallbackLevel > 0) {
+            utterance.rate = 1.0;
+            utterance.pitch = 1.0;
+          } else {
+            utterance.rate = Math.max(0.6, Math.min(1.4, options.rate || state.speechRate || 0.88));
+            utterance.pitch = Math.max(0.7, Math.min(1.3, options.pitch || state.speechPitch || 1.00));
+          }
+
+          if (chosenVoice) {
+            utterance.voice = chosenVoice;
+          }
+          utterance.lang = safeLang;
+
+          utterance.onstart = () => {
+            this.isSpeaking = true;
+            updatePlaybackUI(true);
+            if (this.chunkIndex === 0 && options.onStart) {
+              options.onStart();
+            }
+          };
+
+          utterance.onboundary = (event) => {
+            if (this.onWordBoundary && options.singleUtterance) {
+              this.onWordBoundary(event.charIndex, event.charLength, currentText);
+            }
+          };
+
+          utterance.onend = () => {
+            this.chunkIndex++;
+            window.__ttsActiveUtterances = [];
+            speakNextChunk();
+          };
+
+          utterance.onerror = (event) => {
+            window.__ttsActiveUtterances = [];
+            this.currentUtterance = null;
+
+            if (event.error === 'canceled' || event.error === 'interrupted') {
+              this.isSpeaking = false;
+              updatePlaybackUI(false);
+              return;
+            }
+
+            console.warn("TTS Error:", event.error);
+            if (chosenVoice && chosenVoice.voiceURI) {
+              this.failedVoiceURIs.add(chosenVoice.voiceURI);
+            }
+
+            if (this.fallbackLevel === 0) {
+              this.fallbackLevel = 1;
+              setTimeout(() => speakNextChunk(), 150);
+              return;
+            } else if (this.fallbackLevel === 1) {
+              this.fallbackLevel = 2;
+              setTimeout(() => speakNextChunk(), 150);
+              return;
+            }
+
+            // Fallback to Universal Cloud Web Audio if all local synthesis attempts fail
+            showToast("क्लाउड वैदिक ऑडियो पर स्वतः स्विच किया गया");
+            this.playCloudStream(text, options);
+          };
+
+          try {
+            if (this.synth.paused) this.synth.resume();
+            this.synth.speak(utterance);
+          } catch (err) {
+            console.error("Speak catch fallback to Cloud:", err);
+            this.playCloudStream(text, options);
+          }
+        };
+
+        speakNextChunk();
+      }
+
+      stop() {
+        this.activeChunks = [];
+        this.chunkIndex = 0;
+        this.fallbackLevel = 0;
+        this.isSpeaking = false;
+        this.currentUtterance = null;
+        window.__ttsActiveUtterances = [];
+        stopSyllableWeightedHighlighting();
+
+        if (this.cloudAudio) {
+          try {
+            this.cloudAudio.pause();
+            this.cloudAudio = null;
+          } catch (e) {}
+        }
+
+        if (this.synth) {
+          try {
+            this.synth.cancel();
+            if (this.synth.paused) this.synth.resume();
+          } catch (e) {}
+        }
+        updatePlaybackUI(false);
+        clearWordHighlights();
+      }
+    }
+
+    const dom = {
+      addStepBtn: document.getElementById("addStepBtn"),
+      collectionDropdown: document.getElementById("collectionDropdown"),
+      openCollectionModalBtn: document.getElementById("openCollectionModalBtn"),
+      collectionModal: document.getElementById("collectionModal"),
+      closeCollectionModalBtn: document.getElementById("closeCollectionModalBtn"),
+      collectionsModalList: document.getElementById("collectionsModalList"),
+      stepCounterBadge: document.getElementById("stepCounterBadge"),
+      statusWave: document.getElementById("statusWave"),
+      displayTitle: document.getElementById("displayTitle"),
+      displayDevanagari: document.getElementById("displayDevanagari"),
+      displayPhonetic: document.getElementById("displayPhonetic"),
+      displayMeaning: document.getElementById("displayMeaning"),
+      meaningContainer: document.getElementById("meaningContainer"),
+      meaningToggleBtn: document.getElementById("meaningToggleBtn"),
+      meaningToggleIcon: document.getElementById("meaningToggleIcon"),
+      meaningContent: document.getElementById("meaningContent"),
+      explainToggle: document.getElementById("explainToggle"),
+      progressFill: document.getElementById("progressFill"),
+      prevBtn: document.getElementById("prevBtn"),
+      playBtn: document.getElementById("playBtn"),
+      nextBtn: document.getElementById("nextBtn"),
+      autoAdvanceToggle: document.getElementById("autoAdvanceToggle"),
+      voicePanelToggle: document.getElementById("voicePanelToggle"),
+      voicePanelBody: document.getElementById("voicePanelBody"),
+      voiceChevron: document.getElementById("voiceChevron"),
+      masterVoiceSelector: document.getElementById("masterVoiceSelector"),
+      systemVoiceOptGroup: document.getElementById("systemVoiceOptGroup"),
+      cloudVoiceOptGroup: document.getElementById("cloudVoiceOptGroup"),
+      voiceBadge: document.getElementById("voiceBadge"),
+      rateSlider: document.getElementById("rateSlider"),
+      rateValLabel: document.getElementById("rateValLabel"),
+      pitchSlider: document.getElementById("pitchSlider"),
+      pitchValLabel: document.getElementById("pitchValLabel"),
+      chimeToggle: document.getElementById("chimeToggle"),
+      stepQueue: document.getElementById("stepQueue"),
+      editCurrentStepBtn: document.getElementById("editCurrentStepBtn"),
+      stepModal: document.getElementById("stepModal"),
+      modalHeading: document.getElementById("modalHeading"),
+      modalInputTitle: document.getElementById("modalInputTitle"),
+      modalInputDevanagari: document.getElementById("modalInputDevanagari"),
+      modalInputMeaning: document.getElementById("modalInputMeaning"),
+      modalCancelBtn: document.getElementById("modalCancelBtn"),
+      modalSaveBtn: document.getElementById("modalSaveBtn"),
+      toastMessage: document.getElementById("toastMessage"),
+      ahutiRepeatBox: document.getElementById("ahutiRepeatBox"),
+      ahutiRepeatToggle: document.getElementById("ahutiRepeatToggle"),
+      ahutiCountDisplay: document.getElementById("ahutiCountDisplay"),
+      ahutiMinusBtn: document.getElementById("ahutiMinusBtn"),
+      ahutiPlusBtn: document.getElementById("ahutiPlusBtn"),
+      ahutiResetBtn: document.getElementById("ahutiResetBtn")
+    };
+
+    const tts = new SpeechController();
+    let editingIndex = null;
+    let syllableHighlightTimer = null;
+    let initialHighlightDelayTimer = null;
+    let currentHighlightSpanIndex = 0;
+    let playbackPhase = "idle";
+
+    function countDevanagariBeats(text) {
+      if (!text) return 1;
+      const clean = text.replace(/[।॥\,\-\.\:\;\!\?\s]/g, "");
+      if (!clean) return 1;
+      const aksharas = clean.match(/[\u0904-\u0939\u0958-\u0961]/g);
+      let count = aksharas ? aksharas.length : Math.ceil(clean.length / 2);
+      const viramas = (clean.match(/\u094D/g) || []).length;
+      return Math.max(1, count - Math.floor(viramas * 0.65));
+    }
+
+    function getWordDurationMs(word, rate) {
+      if (!word) return 260;
+      const effectiveRate = Math.max(0.5, Math.min(1.5, rate || state.speechRate || 0.88));
+      const raw = word.trim();
+      const clean = raw.replace(/[।॥\,\-\.\:\;\!\?\s]/g, "");
+      const beats = countDevanagariBeats(clean);
+      let durationMs = 65 + (beats * 92);
+
+      if (clean === "ॐ" || clean === "ओम्") {
+        durationMs = 360;
+      } else if (clean === "स्वाहा") {
+        durationMs = 430;
+      }
+
+      if (raw.includes("॥")) durationMs += 320;
+      else if (raw.includes("।")) durationMs += 190;
+      else if (raw.includes(",")) durationMs += 120;
+
+      return Math.round(durationMs / effectiveRate);
+    }
+
+    function stopSyllableWeightedHighlighting() {
+      if (initialHighlightDelayTimer) {
+        clearTimeout(initialHighlightDelayTimer);
+        initialHighlightDelayTimer = null;
+      }
+      if (syllableHighlightTimer) {
+        clearTimeout(syllableHighlightTimer);
+        syllableHighlightTimer = null;
+      }
+    }
+
+    function scheduleNextFrom(index, rate) {
+      const spans = Array.from(dom.displayDevanagari.querySelectorAll(".word-token"));
+      if (!spans || spans.length === 0 || index >= spans.length - 1) {
+        stopSyllableWeightedHighlighting();
+        return;
+      }
+
+      const effectiveRate = rate || state.speechRate || 0.88;
+      const currentSpan = spans[index];
+      const duration = getWordDurationMs(currentSpan.textContent, effectiveRate);
+
+      syllableHighlightTimer = setTimeout(() => {
+        if (!tts.isSpeaking) {
+          stopSyllableWeightedHighlighting();
+          return;
+        }
+
+        currentSpan.classList.remove("highlight");
+        currentHighlightSpanIndex = index + 1;
+
+        if (spans[currentHighlightSpanIndex]) {
+          spans[currentHighlightSpanIndex].classList.add("highlight");
+          scheduleNextFrom(currentHighlightSpanIndex, effectiveRate);
+        }
+      }, duration);
+    }
+
+    function startSyllableWeightedHighlighting(rate = 0.88) {
+      stopSyllableWeightedHighlighting();
+      const spans = Array.from(dom.displayDevanagari.querySelectorAll(".word-token"));
+      if (!spans || spans.length === 0) return;
+
+      clearWordHighlights();
+      const effectiveRate = rate || state.speechRate || 0.88;
+
+      initialHighlightDelayTimer = setTimeout(() => {
+        if (!tts.isSpeaking) return;
+        currentHighlightSpanIndex = 0;
+        if (spans[0]) {
+          spans[0].classList.add("highlight");
+          scheduleNextFrom(0, effectiveRate);
+        }
+      }, 600);
+    }
+
+    tts.onWordBoundary = (charIndex, charLength, spokenText) => {
+      const spans = Array.from(dom.displayDevanagari.querySelectorAll(".word-token"));
+      if (!spans || spans.length === 0) return;
+
+      let bestSpan = null;
+      let bestIndex = -1;
+      let minDiff = Infinity;
+
+      spans.forEach((span, idx) => {
+        const start = parseInt(span.dataset.start, 10);
+        const diff = Math.abs(start - charIndex);
+
+        if (charIndex >= start && charIndex < start + parseInt(span.dataset.length, 10) + 2) {
+          bestSpan = span;
+          bestIndex = idx;
+        } else if (diff < minDiff) {
+          minDiff = diff;
+          if (bestIndex === -1 && diff < 15) {
+            bestSpan = span;
+            bestIndex = idx;
+          }
+        }
+      });
+
+      if (bestSpan && bestIndex !== -1 && bestIndex !== currentHighlightSpanIndex) {
+        clearWordHighlights();
+        bestSpan.classList.add("highlight");
+        currentHighlightSpanIndex = bestIndex;
+        stopSyllableWeightedHighlighting();
+        scheduleNextFrom(currentHighlightSpanIndex, state.speechRate);
+      }
+    };
+
+    function updatePlaybackUI(isPlaying) {
+      if (!dom.playBtn) return;
+      if (isPlaying) {
+        dom.playBtn.textContent = "⏸";
+        dom.playBtn.title = "Pause (Spacebar)";
+        dom.statusWave?.classList.add("speaking");
+      } else {
+        dom.playBtn.textContent = "▶";
+        dom.playBtn.title = "Play (Spacebar)";
+        dom.statusWave?.classList.remove("speaking");
+      }
+    }
+
+    function clearWordHighlights() {
+      if (!dom.displayDevanagari) return;
+      const spans = dom.displayDevanagari.querySelectorAll(".word-token");
+      spans.forEach(s => s.classList.remove("highlight"));
+    }
+
+    function showToast(msg) {
+      dom.toastMessage.textContent = msg;
+      dom.toastMessage.classList.add("show");
+      setTimeout(() => dom.toastMessage.classList.remove("show"), 2800);
+    }
+
+    function getCurrentSteps() {
+      if (PRESETS[state.currentPreset]) {
+        return PRESETS[state.currentPreset].steps;
+      }
+      return state.customPresets[state.currentPreset]?.steps || [];
+    }
+
+    function getCurrentStep() {
+      const steps = getCurrentSteps();
+      return steps[state.currentStepIndex] || steps[0];
+    }
+
+    /* Populates the Compact Dropdown & Modal Grid for Sacred Collections */
+    function renderCollections() {
+      const allPresets = { ...PRESETS, ...state.customPresets };
+
+      // 1. Update Dropdown
+      if (dom.collectionDropdown) {
+        dom.collectionDropdown.innerHTML = "";
+        Object.keys(allPresets).forEach(key => {
+          const opt = document.createElement("option");
+          opt.value = key;
+          opt.textContent = `${allPresets[key].name} (${allPresets[key].steps.length} चरण)`;
+          if (state.currentPreset === key) opt.selected = true;
+          dom.collectionDropdown.appendChild(opt);
+        });
+
+        dom.collectionDropdown.onchange = (e) => {
+          switchCollection(e.target.value);
+        };
+      }
+
+      // 2. Update Modal Grid
+      if (dom.collectionsModalList) {
+        dom.collectionsModalList.innerHTML = "";
+        Object.keys(allPresets).forEach(key => {
+          const item = allPresets[key];
+          const card = document.createElement("div");
+          card.className = `collection-card-item ${state.currentPreset === key ? "active" : ""}`;
+          card.innerHTML = `
+            <div class="collection-card-title">${item.name}</div>
+            <div class="collection-card-sub">${item.desc || "वैदिक मंत्र एवं पावन स्तुति पाठ"}</div>
+            <div class="collection-card-badge">${item.steps.length} चरण (Steps)</div>
+          `;
+          card.onclick = () => {
+            switchCollection(key);
+            closeCollectionModal();
+          };
+          dom.collectionsModalList.appendChild(card);
+        });
+      }
+    }
+
+    function switchCollection(key) {
+      if (state.currentPreset === key) return;
+      stopAllAudio();
+      state.currentPreset = key;
+      state.currentStepIndex = 0;
+      saveState();
+      renderCollections();
+      renderStep();
+      renderStepQueue();
+      showToast(`संग्रह बदला गया: ${PRESETS[key]?.name || key}`);
+    }
+
+    function openCollectionModal() {
+      if (dom.collectionModal) {
+        renderCollections();
+        dom.collectionModal.classList.add("open");
+      }
+    }
+
+    function closeCollectionModal() {
+      if (dom.collectionModal) {
+        dom.collectionModal.classList.remove("open");
+      }
+    }
+
+    if (dom.openCollectionModalBtn) dom.openCollectionModalBtn.onclick = openCollectionModal;
+    if (dom.closeCollectionModalBtn) dom.closeCollectionModalBtn.onclick = closeCollectionModal;
+
+    function renderStepQueue() {
+      if (!dom.stepQueue) return;
+      dom.stepQueue.innerHTML = "";
+      const steps = getCurrentSteps();
+      steps.forEach((step, index) => {
+        const item = document.createElement("div");
+        item.className = `step-item ${index === state.currentStepIndex ? "active" : ""}`;
+        item.innerHTML = `
+          <div class="step-item-number">${index + 1}</div>
+          <div class="step-item-info">${step.title}</div>
+        `;
+        item.onclick = () => {
+          if (state.currentStepIndex === index) return;
+          stopAllAudio();
+          state.currentStepIndex = index;
+          renderStep();
+          renderStepQueue();
+          playActiveStep();
+        };
+        dom.stepQueue.appendChild(item);
+      });
+    }
+
+    function updateAhutiCounterUI() {
+      if (dom.ahutiCountDisplay) {
+        dom.ahutiCountDisplay.textContent = state.ahutiCount || 1;
+      }
+    }
+
+    /* Resilient Voice Rendering: Guarantees choices on Linux Brave / Chrome / Android */
+    function renderVoiceOptions() {
+      if (!dom || !dom.systemVoiceOptGroup) return;
+      dom.systemVoiceOptGroup.innerHTML = "";
+      const allVoices = tts.voices || [];
+
+      // If Linux Brave or browser returns zero system voices, display informative fallback item
+      if (allVoices.length === 0) {
+        const fallbackOpt = document.createElement("option");
+        fallbackOpt.value = "sys_none";
+        fallbackOpt.disabled = true;
+        fallbackOpt.textContent = "ℹ️ सिस्टम में कोई टीटीएस उपलब्ध नहीं (क्लाउड सक्रिय)";
+        dom.systemVoiceOptGroup.appendChild(fallbackOpt);
+
+        if (!state.selectedVoiceId || state.selectedVoiceId.startsWith("sys_")) {
+          state.selectedVoiceId = "cloud_hi";
+          saveState();
+        }
+        if (dom.masterVoiceSelector) {
+          dom.masterVoiceSelector.value = state.selectedVoiceId;
+        }
+        updateVoiceBadgeDisplay();
+        return;
+      }
+
+      const filteredVoices = allVoices.filter(v => tts.matchesAllowedTag(v));
+      const hasIndicVoices = filteredVoices.length > 0;
+      const displayVoices = hasIndicVoices ? filteredVoices : allVoices;
+
+      displayVoices.sort((a, b) => {
+        const aIsSa = tts.isSaIn(a) ? 100 : (tts.matchesAllowedTag(a) ? 50 : 0);
+        const bIsSa = tts.isSaIn(b) ? 100 : (tts.matchesAllowedTag(b) ? 50 : 0);
+        return bIsSa - aIsSa;
+      });
+
+      const firstSaInVoice = displayVoices.find(v => tts.isSaIn(v));
+      const firstHiInVoice = displayVoices.find(v => tts.matchesAllowedTag(v) && !tts.isLatinVoice(v));
+      const defaultCandidate = firstSaInVoice || firstHiInVoice || displayVoices[0];
+
+      // Auto option
+      const autoOpt = document.createElement("option");
+      autoOpt.value = "auto_detect";
+      const targetLangName = firstSaInVoice ? "sa_IN (संस्कृत)" : (firstHiInVoice ? "hi_IN (हिंदी)" : (defaultCandidate?.lang || "सिस्टम डिफ़ॉल्ट"));
+      autoOpt.textContent = `✨ स्वतः अनुशंसित [${targetLangName}]`;
+      dom.systemVoiceOptGroup.appendChild(autoOpt);
+
+      displayVoices.forEach(voice => {
+        const opt = document.createElement("option");
+        opt.value = `sys_${voice.voiceURI}`;
+
+        const isSa = tts.isSaIn(voice);
+        const isLatn = tts.isLatinVoice(voice);
+        let labelName = voice.name;
+
+        if (voice.voiceURI && voice.voiceURI !== voice.name) {
+          labelName = `${voice.name} — [${voice.voiceURI}]`;
+        } else {
+          labelName = `${voice.name} (${voice.lang})`;
+        }
+
+        if (isSa) {
+          labelName = `★ [sa_IN] ${labelName}`;
+        } else if (isLatn) {
+          labelName = `🔤 [Phonetic Latn] ${labelName}`;
+        } else if (tts.matchesAllowedTag(voice)) {
+          labelName = `🇮🇳 [hi_IN] ${labelName}`;
+        }
+
+        opt.textContent = labelName;
+        dom.systemVoiceOptGroup.appendChild(opt);
+      });
+
+      if (!hasIndicVoices) {
+        const infoOpt = document.createElement("option");
+        infoOpt.disabled = true;
+        infoOpt.textContent = "── ℹ️ sa_IN / hi_IN स्थापित नहीं है (सिस्टम आवाज़ें) ──";
+        dom.systemVoiceOptGroup.insertBefore(infoOpt, dom.systemVoiceOptGroup.children[1] || null);
+      }
+
+      // If sa_IN is present among system voices (especially on Android / Google Speech Services),
+      // prioritize and automatically select it if no explicit custom voice was chosen or if currently on auto/default
+      if (firstSaInVoice) {
+        if (!state.selectedVoiceId || state.selectedVoiceId === "cloud_hi" || state.selectedVoiceId === "auto_detect" || !tts.getVoiceByURI(state.selectedVoiceId.replace("sys_", ""))) {
+          state.selectedVoiceId = `sys_${firstSaInVoice.voiceURI}`;
+          saveState();
+        }
+      }
+
+      if (dom.masterVoiceSelector) {
+        dom.masterVoiceSelector.value = state.selectedVoiceId;
+      }
+
+      updateVoiceBadgeDisplay();
+    }
+
+    function updateVoiceBadgeDisplay() {
+      if (!dom.voiceBadge) return;
+
+      if (state.selectedVoiceId === "cloud_hi" || state.selectedVoiceId === "cloud_sa") {
+        dom.voiceBadge.textContent = "क्लाउड वाणी (सक्रिय)";
+        return;
+      }
+
+      const allVoices = tts.voices || [];
+      if (allVoices.length === 0) {
+        dom.voiceBadge.textContent = "क्लाउड सक्रिय";
+        return;
+      }
+
+      let activeVoice = null;
+      if (state.selectedVoiceId && state.selectedVoiceId.startsWith("sys_")) {
+        const uri = state.selectedVoiceId.replace("sys_", "");
+        activeVoice = allVoices.find(v => v.voiceURI === uri);
+      }
+
+      if (!activeVoice) {
+        activeVoice = tts.getDefaultSaOrHiVoice(false);
+      }
+
+      if (activeVoice) {
+        if (tts.isSaIn(activeVoice)) {
+          dom.voiceBadge.textContent = "sa_IN (सक्रिय)";
+        } else if (tts.matchesAllowedTag(activeVoice)) {
+          dom.voiceBadge.textContent = "hi_IN (सक्रिय)";
+        } else {
+          dom.voiceBadge.textContent = `${activeVoice.lang || "डिफ़ॉल्ट"} (सक्रिय)`;
+        }
+      } else {
+        dom.voiceBadge.textContent = "क्लाउड सक्रिय";
+      }
+    }
+
+    function renderStep() {
+      const steps = getCurrentSteps();
+      if (!steps || !steps.length) return;
+
+      if (state.currentStepIndex >= steps.length) {
+        state.currentStepIndex = steps.length - 1;
+      }
+      if (state.currentStepIndex < 0) {
+        state.currentStepIndex = 0;
+      }
+
+      const step = steps[state.currentStepIndex];
+
+      dom.stepCounterBadge.textContent = `चरण ${state.currentStepIndex + 1} / ${steps.length}`;
+      dom.displayTitle.textContent = step.title;
+
+      dom.displayDevanagari.innerHTML = "";
+      const words = step.devanagari.split(/(\s+)/);
+      let charAccumulator = 0;
+
+      words.forEach(token => {
+        if (/^\s+$/.test(token)) {
+          dom.displayDevanagari.appendChild(document.createTextNode(token));
+          charAccumulator += token.length;
+        } else {
+          const span = document.createElement("span");
+          span.className = "word-token";
+          span.textContent = token;
+          span.dataset.start = charAccumulator;
+          span.dataset.length = token.length;
+          dom.displayDevanagari.appendChild(span);
+          charAccumulator += token.length;
+        }
+      });
+
+      if (dom.displayPhonetic) {
+        dom.displayPhonetic.style.display = "none";
+      }
+
+      if (step.meaning || step.mantraMeaning) {
+        let contentHtml = "";
+        if (step.meaning) {
+          contentHtml += `
+            <div class="meaning-section">
+              <span class="meaning-tag">📜 विधि एवं भावना:</span>
+              <span>${step.meaning.replace(/^विधि एवं भावना:\s*/, '')}</span>
+            </div>
+          `;
+        }
+        if (step.mantraMeaning) {
+          contentHtml += `
+            <div class="meaning-section" style="margin-top: 0.35rem; padding-top: 0.35rem; border-top: 1px dashed var(--divider);">
+              <span class="meaning-tag" style="color: #9a3412;">💡 मंत्र का अर्थ:</span>
+              <span>${step.mantraMeaning.replace(/^मंत्र अर्थ:\s*/, '')}</span>
+            </div>
+          `;
+        }
+        dom.displayMeaning.innerHTML = contentHtml;
+        dom.meaningContainer.style.display = "block";
+      } else {
+        dom.meaningContainer.style.display = "none";
+      }
+
+      dom.prevBtn.disabled = state.currentStepIndex === 0;
+      dom.nextBtn.disabled = state.currentStepIndex === steps.length - 1;
+
+      const progressPercent = ((state.currentStepIndex + 1) / steps.length) * 100;
+      dom.progressFill.style.width = `${progressPercent}%`;
+
+      // Ahuti Repeat is strictly meant for the Gayatri Havan Ahuti step (Step 9)
+      const isRepeatableStep = (state.currentPreset === "gayatri_havan" && (state.currentStepIndex === 8 || step.isHavanAhuti));
+      if (dom.ahutiRepeatBox) {
+        if (isRepeatableStep) {
+          dom.ahutiRepeatBox.style.display = "flex";
+          updateAhutiCounterUI();
+        } else {
+          dom.ahutiRepeatBox.style.display = "none";
+        }
+      }
+
+      saveState();
+    }
+
+    if (dom.meaningToggleBtn && dom.meaningContent && dom.meaningToggleIcon) {
+      dom.meaningToggleBtn.onclick = () => {
+        const isHidden = dom.meaningContent.style.display === "none";
+        dom.meaningContent.style.display = isHidden ? "block" : "none";
+        dom.meaningToggleIcon.textContent = isHidden ? "▼" : "▶";
+      };
+    }
+
+    function stopAllAudio() {
+      playbackPhase = "idle";
+      stopSyllableWeightedHighlighting();
+      tts.stop();
+      clearWordHighlights();
+      if (dom.meaningContainer) {
+        dom.meaningContainer.classList.remove("speaking-explanation");
+      }
+      updatePlaybackUI(false);
+    }
+
+    function speakTextEngine(text, options = {}, onDone = null) {
+      const voiceId = state.selectedVoiceId || "cloud_hi";
+      let voiceURI = "";
+
+      if (voiceId.startsWith("cloud_")) {
+        voiceURI = voiceId;
+      } else if (voiceId.startsWith("sys_")) {
+        voiceURI = voiceId.replace("sys_", "");
+      }
+
+      tts.onEndCallback = onDone;
+      tts.speak(text, {
+        rate: options.rate || state.speechRate,
+        pitch: options.pitch || state.speechPitch,
+        voiceURI: voiceURI,
+        preferHindi: options.preferHindi || false,
+        singleUtterance: options.singleUtterance || false,
+        onStart: options.onStart || null
+      });
+    }
+
+    function playActiveStep() {
+      const step = getCurrentStep();
+      if (!step) return;
+
+      stopAllAudio();
+
+      if (state.enableChime) {
+        bellPlayer.playChime(528);
+      }
+
+      setTimeout(() => {
+        const isRepeatable = (state.currentPreset === "gayatri_havan" && (state.currentStepIndex === 8 || step.isHavanAhuti));
+        const shouldExplain = state.explainEnabled && (!isRepeatable || (state.ahutiCount || 1) <= 1);
+        const explanationText = [step.meaning, step.mantraMeaning].filter(Boolean).join(" ");
+
+        if (shouldExplain && explanationText.trim().length > 0) {
+          playbackPhase = "explaining";
+          if (dom.meaningContainer) {
+            dom.meaningContainer.classList.add("speaking-explanation");
+            if (dom.meaningContent) dom.meaningContent.style.display = "block";
+            if (dom.meaningToggleIcon) dom.meaningToggleIcon.textContent = "▼";
+          }
+          updatePlaybackUI(true);
+
+          speakTextEngine(explanationText, { rate: 0.95, pitch: 1.0, preferHindi: true, singleUtterance: false }, () => {
+            if (playbackPhase !== "explaining") return;
+            if (dom.meaningContainer) {
+              dom.meaningContainer.classList.remove("speaking-explanation");
+            }
+            setTimeout(() => {
+              if (playbackPhase !== "explaining") return;
+              startMantraChant(step);
+            }, 300);
+          });
+        } else {
+          startMantraChant(step);
+        }
+      }, 180);
+    }
+
+    function startMantraChant(step) {
+      playbackPhase = "chanting";
+      if (dom.meaningContainer) {
+        dom.meaningContainer.classList.remove("speaking-explanation");
+      }
+      updatePlaybackUI(true);
+
+      speakTextEngine(step.devanagari, {
+        rate: state.speechRate,
+        pitch: state.speechPitch,
+        singleUtterance: true,
+        onStart: () => {
+          startSyllableWeightedHighlighting(state.speechRate);
+        }
+      }, () => {
+        advanceToNextStepIfAllowed();
+      });
+    }
+
+    function advanceToNextStepIfAllowed() {
+      playbackPhase = "idle";
+      stopSyllableWeightedHighlighting();
+      clearWordHighlights();
+      if (dom.meaningContainer) {
+        dom.meaningContainer.classList.remove("speaking-explanation");
+      }
+
+      const steps = getCurrentSteps();
+      const isRepeatable = (state.currentPreset === "gayatri_havan" && (state.currentStepIndex === 8 || steps[state.currentStepIndex]?.isHavanAhuti));
+
+      if (isRepeatable && state.ahutiRepeatEnabled) {
+        state.ahutiCount = (state.ahutiCount || 1) + 1;
+        saveState();
+        updateAhutiCounterUI();
+        showToast(`आहुति चक्र #${state.ahutiCount} समर्पित`);
+        setTimeout(() => {
+          playActiveStep();
+        }, 700);
+        return;
+      }
+
+      if (state.autoAdvance) {
+        if (state.currentStepIndex < steps.length - 1) {
+          setTimeout(() => {
+            state.currentStepIndex++;
+            renderStep();
+            renderStepQueue();
+            playActiveStep();
+          }, 650);
+        } else {
+          showToast("सभी चरण पूर्ण हुए (All steps completed)");
+        }
+      }
+    }
+
+    dom.playBtn.onclick = () => {
+      if (tts.isSpeaking) {
+        stopAllAudio();
+      } else {
+        playActiveStep();
+      }
+    };
+
+    dom.prevBtn.onclick = () => {
+      if (state.currentStepIndex > 0) {
+        stopAllAudio();
+        state.currentStepIndex--;
+        renderStep();
+        renderStepQueue();
+        playActiveStep();
+      }
+    };
+
+    dom.nextBtn.onclick = () => {
+      const steps = getCurrentSteps();
+      if (state.currentStepIndex < steps.length - 1) {
+        stopAllAudio();
+        state.currentStepIndex++;
+        renderStep();
+        renderStepQueue();
+        playActiveStep();
+      }
+    };
+
+    if (dom.voicePanelToggle && dom.voicePanelBody && dom.voiceChevron) {
+      dom.voicePanelToggle.onclick = () => {
+        const isCurrentlyExpanded = dom.voicePanelBody.classList.contains("expanded");
+        if (isCurrentlyExpanded) {
+          dom.voicePanelBody.classList.remove("expanded");
+          dom.voiceChevron.classList.remove("expanded");
+        } else {
+          dom.voicePanelBody.classList.add("expanded");
+          dom.voiceChevron.classList.add("expanded");
+          tts.initVoices();
+        }
+      };
+    }
+
+    if (dom.masterVoiceSelector) {
+      dom.masterVoiceSelector.onchange = (e) => {
+        stopAllAudio();
+        state.selectedVoiceId = e.target.value;
+        updateVoiceBadgeDisplay();
+        saveState();
+        showToast("आवाज़ बदल दी गई है (Voice updated)");
+      };
+    }
+
+    document.querySelectorAll(".style-preset-btn").forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll(".style-preset-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const style = btn.dataset.style;
+        if (style === "acharya") {
+          state.speechRate = 0.88;
+          state.speechPitch = 1.00;
+          showToast("आचार्य शैली: शुद्ध कर्मकांडीय पाठ (Ritual)");
+        } else if (style === "rishi") {
+          state.speechRate = 0.80;
+          state.speechPitch = 0.85;
+          showToast("ऋषि शैली: गंभीर एवं शांत मंत्रोच्चार (Deep)");
+        } else if (style === "dhyan") {
+          state.speechRate = 0.72;
+          state.speechPitch = 0.95;
+          showToast("साधना शैली: मंद एवं ध्यानस्थ गति");
+        } else if (style === "fast") {
+          state.speechRate = 1.15;
+          state.speechPitch = 1.05;
+          showToast("शीघ्र शैली: द्रुत स्वाध्याय");
+        }
+
+        dom.rateSlider.value = state.speechRate;
+        dom.rateValLabel.textContent = `${state.speechRate.toFixed(2)}x`;
+        dom.pitchSlider.value = state.speechPitch;
+        dom.pitchValLabel.textContent = state.speechPitch.toFixed(2);
+        saveState();
+      };
+    });
+
+    dom.rateSlider.oninput = (e) => {
+      state.speechRate = parseFloat(e.target.value);
+      dom.rateValLabel.textContent = `${state.speechRate.toFixed(2)}x`;
+      saveState();
+    };
+
+    dom.pitchSlider.oninput = (e) => {
+      state.speechPitch = parseFloat(e.target.value);
+      dom.pitchValLabel.textContent = state.speechPitch.toFixed(2);
+      saveState();
+    };
+
+    dom.autoAdvanceToggle.onchange = (e) => {
+      state.autoAdvance = e.target.checked;
+      saveState();
+    };
+
+    if (dom.explainToggle) {
+      dom.explainToggle.onchange = (e) => {
+        state.explainEnabled = e.target.checked;
+        saveState();
+        showToast(state.explainEnabled ? "विधि व अर्थ व्याख्या सक्रिय (Explanation ON)" : "व्याख्या बंद - केवल मंत्र पाठ (Mantra Only)");
+      };
+    }
+
+    dom.chimeToggle.onchange = (e) => {
+      state.enableChime = e.target.checked;
+      saveState();
+    };
+
+    if (dom.ahutiRepeatToggle) {
+      dom.ahutiRepeatToggle.onchange = (e) => {
+        state.ahutiRepeatEnabled = e.target.checked;
+        saveState();
+        showToast(state.ahutiRepeatEnabled ? "मंत्राहुति दोहराव सक्रिय (Repeat ON)" : "दोहराव बंद - अगला चरण आएगा (Repeat OFF)");
+      };
+    }
+
+    if (dom.ahutiMinusBtn) {
+      dom.ahutiMinusBtn.onclick = () => {
+        if ((state.ahutiCount || 1) > 1) {
+          state.ahutiCount--;
+          saveState();
+          updateAhutiCounterUI();
+        }
+      };
+    }
+
+    if (dom.ahutiPlusBtn) {
+      dom.ahutiPlusBtn.onclick = () => {
+        state.ahutiCount = (state.ahutiCount || 1) + 1;
+        saveState();
+        updateAhutiCounterUI();
+      };
+    }
+
+    if (dom.ahutiResetBtn) {
+      dom.ahutiResetBtn.onclick = () => {
+        state.ahutiCount = 1;
+        saveState();
+        updateAhutiCounterUI();
+        showToast("आहुति गणना १ पर रीसेट की गई");
+      };
+    }
+
+    function openStepModal(isEdit = false) {
+      editingIndex = isEdit ? state.currentStepIndex : null;
+      dom.modalHeading.textContent = isEdit ? "चरण संपादित करें (Edit Step)" : "नया चरण जोड़ें (Add New Step)";
+
+      if (isEdit) {
+        const step = getCurrentStep();
+        dom.modalInputTitle.value = step.title || "";
+        dom.modalInputDevanagari.value = step.devanagari || "";
+        dom.modalInputMeaning.value = step.meaning || "";
+      } else {
+        dom.modalInputTitle.value = `चरण ${getCurrentSteps().length + 1}`;
+        dom.modalInputDevanagari.value = "";
+        dom.modalInputMeaning.value = "";
+      }
+
+      dom.stepModal.classList.add("open");
+      dom.modalInputDevanagari.focus();
+    }
+
+    function closeStepModal() {
+      dom.stepModal.classList.remove("open");
+    }
+
+    dom.addStepBtn.onclick = () => openStepModal(false);
+    dom.editCurrentStepBtn.onclick = () => openStepModal(true);
+    dom.modalCancelBtn.onclick = closeStepModal;
+
+    dom.modalSaveBtn.onclick = () => {
+      const devanagari = dom.modalInputDevanagari.value.trim();
+      if (!devanagari) {
+        showToast("कृपया देवनागरी पाठ दर्ज करें (Text required)");
+        return;
+      }
+
+      const newStep = {
+        title: dom.modalInputTitle.value.trim() || `चरण ${getCurrentSteps().length + 1}`,
+        devanagari: devanagari,
+        meaning: dom.modalInputMeaning.value.trim()
+      };
+
+      if (PRESETS[state.currentPreset]) {
+        const customKey = `custom_${state.currentPreset}_${Date.now()}`;
+        state.customPresets[customKey] = {
+          id: customKey,
+          name: `${PRESETS[state.currentPreset].name} (कस्टम)`,
+          steps: JSON.parse(JSON.stringify(PRESETS[state.currentPreset].steps))
+        };
+        state.currentPreset = customKey;
+      }
+
+      const steps = state.customPresets[state.currentPreset].steps;
+
+      if (editingIndex !== null) {
+        steps[editingIndex] = newStep;
+        showToast("चरण अद्यतन किया गया (Step Updated)");
+      } else {
+        steps.push(newStep);
+        state.currentStepIndex = steps.length - 1;
+        showToast("नया चरण जोड़ा गया (Step Added)");
+      }
+
+      saveState();
+      closeStepModal();
+      renderCollections();
+      renderStep();
+      renderStepQueue();
+    };
+
+    window.addEventListener("keydown", (e) => {
+      if (dom.stepModal.classList.contains("open") || dom.collectionModal?.classList.contains("open")) return;
+      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.target.tagName === "SELECT") return;
+
+      if (e.code === "Space") {
+        e.preventDefault();
+        dom.playBtn.click();
+      } else if (e.code === "ArrowLeft") {
+        e.preventDefault();
+        dom.prevBtn.click();
+      } else if (e.code === "ArrowRight") {
+        e.preventDefault();
+        dom.nextBtn.click();
+      }
+    });
+
+    window.onload = () => {
+      loadState();
+
+      dom.autoAdvanceToggle.checked = state.autoAdvance;
+      if (dom.explainToggle) dom.explainToggle.checked = state.explainEnabled !== false;
+      if (dom.chimeToggle) dom.chimeToggle.checked = state.enableChime !== false;
+
+      dom.rateSlider.value = state.speechRate;
+      dom.rateValLabel.textContent = `${state.speechRate.toFixed(2)}x`;
+      dom.pitchSlider.value = state.speechPitch;
+      dom.pitchValLabel.textContent = state.speechPitch.toFixed(2);
+
+      document.querySelectorAll(".style-preset-btn").forEach(btn => {
+        const style = btn.dataset.style;
+        const isAcharya = style === "acharya" && Math.abs(state.speechRate - 0.88) < 0.04 && Math.abs(state.speechPitch - 1.00) < 0.04;
+        const isRishi = style === "rishi" && Math.abs(state.speechRate - 0.80) < 0.04 && Math.abs(state.speechPitch - 0.85) < 0.04;
+        const isDhyan = style === "dhyan" && Math.abs(state.speechRate - 0.72) < 0.04 && Math.abs(state.speechPitch - 0.95) < 0.04;
+        const isFast = style === "fast" && Math.abs(state.speechRate - 1.15) < 0.04 && Math.abs(state.speechPitch - 1.05) < 0.04;
+        btn.classList.toggle("active", isAcharya || (!isRishi && !isDhyan && !isFast && style === "acharya"));
+      });
+
+      renderCollections();
+      renderStep();
+      renderStepQueue();
+      tts.initVoices();
+    };
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => console.log('PWA Service Worker registered:', reg.scope))
+          .catch((err) => console.error('PWA registration failed:', err));
+      });
+    }
+  </script>
+  </body>
+</html>
