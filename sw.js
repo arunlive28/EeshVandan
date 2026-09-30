@@ -1,10 +1,10 @@
-const CACHE_NAME = 'eesh-vandan-v1';
+const CACHE_NAME = 'eesh-vandan-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './data.js',           // <-- Cached alongside HTML
   './manifest.json',
-  './icon-192.png',
-  './icon-512.png'
+  './diya.png'
 ];
 
 self.addEventListener('install', (event) => {
