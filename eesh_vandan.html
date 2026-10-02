@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>ईश वंदन - Eesh Vandan | पावन मंत्र, स्तोत्र एवं वैदिक हवन सहायक</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Manifest Link -->
   <link rel="manifest" href="manifest.json">
+
+  <!-- Mobile App Meta Tags -->
   <meta name="theme-color" content="#8b4a2b">
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-icon" href="diya.png">
 
@@ -37,134 +41,927 @@
       --control-border: #bfad9b;
       --slider-track: #bfae9c;
       --divider: #bcaaa9;
+      --warning-bg: #fff1db;
+      --warning-border: #d97706;
+      --warning-text: #78350f;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg-gradient); color: var(--text-main); min-height: 100dvh; display: flex; flex-direction: column; line-height: 1.5; overflow-x: hidden; }
-    .app-container { max-width: 1120px; margin: 0 auto; padding: 0.85rem 0.75rem 2.5rem; width: 100%; display: flex; flex-direction: column; gap: 0.85rem; }
-    @media (min-width: 640px) { .app-container { padding: 1.25rem 1rem 3rem; gap: 1.25rem; } }
-    header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.75rem; border-bottom: 1px solid var(--divider); gap: 0.5rem; flex-wrap: wrap; }
-    .brand { display: flex; align-items: center; gap: 0.65rem; }
-    .brand-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent), #d97706); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.35rem; font-weight: bold; box-shadow: 0 4px 12px var(--accent-glow); user-select: none; flex-shrink: 0; }
-    @media (min-width: 640px) { .brand-icon { width: 46px; height: 46px; border-radius: 12px; font-size: 1.6rem; } }
-    .brand-text { display: flex; flex-direction: column; gap: 0.1rem; }
-    .brand-title { font-family: 'Noto Sans Devanagari', 'Cinzel', serif; font-size: clamp(1.15rem, 4vw, 1.45rem); font-weight: 800; color: var(--text-main); line-height: 1.15; }
-    .brand-title span { font-family: 'Cinzel', serif; font-size: clamp(0.95rem, 3.2vw, 1.15rem); color: var(--accent); margin-left: 0.25rem; }
-    .brand-sub { font-size: clamp(0.68rem, 2.3vw, 0.78rem); color: var(--text-muted); font-weight: 600; }
-    .top-actions { display: flex; gap: 0.4rem; align-items: center; }
-    .icon-btn { background: var(--card-bg); border: 1px solid var(--control-border); color: var(--text-main); width: 36px; height: 36px; border-radius: 9px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1rem; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); flex-shrink: 0; }
-    .icon-btn:hover { background: var(--control-bg); transform: translateY(-1px); }
-    .collection-selector-bar { display: flex; align-items: center; gap: 0.65rem; background: var(--card-bg); padding: 0.6rem 0.85rem; border-radius: 12px; border: 1px solid var(--card-border); flex-wrap: wrap; }
-    .collection-select { flex: 1; padding: 0.5rem 0.65rem; border-radius: 8px; border: 1px solid var(--control-border); background: var(--control-bg); color: var(--text-main); font-size: 0.88rem; font-weight: 600; outline: none; min-width: 220px; }
-    .browse-collections-btn { background: var(--control-bg); border: 1px solid var(--control-border); color: var(--text-main); padding: 0.5rem 0.85rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
-    .browse-collections-btn:hover { background: var(--active-card); border-color: var(--accent); }
-    .main-grid { display: grid; grid-template-columns: 1fr 340px; gap: 1.25rem; }
-    @media (max-width: 860px) { .main-grid { grid-template-columns: 1fr; gap: 1rem; } }
-    .reader-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 18px; padding: 1.25rem 1rem; box-shadow: var(--card-shadow); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; min-height: auto; }
-    @media (min-width: 640px) { .reader-card { padding: 2rem 1.75rem; border-radius: 20px; min-height: 440px; } }
-    .step-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; }
-    .step-badge { background: var(--tag-bg); color: var(--tag-color); font-size: clamp(0.7rem, 2.2vw, 0.78rem); font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 8px; text-transform: uppercase; }
-    .status-wave { display: flex; align-items: center; gap: 3.5px; height: 18px; }
-    .wave-bar { width: 3.5px; background: var(--accent); border-radius: 4px; height: 4px; transition: height 0.15s ease; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    .app-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.85rem 0.75rem 2.5rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    @media (min-width: 640px) {
+      .app-container {
+        padding: 1.25rem 1rem 3rem;
+        gap: 1.25rem;
+      }
+    }
+
+    /* Android Missing TTS Notification Banner */
+    .tts-alert-banner {
+      display: none;
+      background: var(--warning-bg);
+      border: 1.5px solid var(--warning-border);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      color: var(--warning-text);
+      font-size: 0.85rem;
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.15);
+      position: relative;
+    }
+    .tts-alert-banner.active { display: flex; flex-direction: column; gap: 0.45rem; }
+    .tts-alert-banner strong { display: flex; align-items: center; gap: 0.4rem; font-size: 0.92rem; }
+    .tts-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.3rem; }
+    .tts-install-link {
+      background: #8b4a2b;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.35rem 0.7rem;
+      border-radius: 7px;
+      font-weight: 600;
+      font-size: 0.78rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: background 0.2s;
+    }
+    .tts-install-link:hover { background: #70361c; }
+    .tts-alert-close {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      color: var(--warning-text);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--divider);
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--accent), #d97706);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.35rem;
+      font-weight: bold;
+      box-shadow: 0 4px 12px var(--accent-glow);
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 640px) {
+      .brand-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        font-size: 1.6rem;
+      }
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .brand-title {
+      font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+      font-size: clamp(1.15rem, 4vw, 1.45rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--text-main);
+      line-height: 1.15;
+    }
+
+    .brand-title span {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.95rem, 3.2vw, 1.15rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      margin-left: 0.25rem;
+    }
+
+    .brand-sub {
+      font-size: clamp(0.68rem, 2.3vw, 0.78rem);
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+      font-weight: 600;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 0.45rem;
+      align-items: center;
+    }
+
+    .icon-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--control-border);
+      color: var(--text-main);
+      min-width: 36px;
+      height: 36px;
+      padding: 0 0.55rem;
+      border-radius: 9px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      gap: 0.35rem;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      flex-shrink: 0;
+    }
+
+    .icon-btn:hover {
+      background: var(--control-bg);
+      transform: translateY(-1px);
+    }
+
+    .pwa-install-btn {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent-hover);
+      display: none;
+    }
+    .pwa-install-btn:hover { background: var(--accent-hover); }
+
+    .collection-selector-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--card-bg);
+      padding: 0.6rem 0.85rem;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      flex-wrap: wrap;
+    }
+
+    .collection-select {
+      flex: 1;
+      padding: 0.5rem 0.65rem;
+      border-radius: 8px;
+      border: 1px solid var(--control-border);
+      background: var(--control-bg);
+      color: var(--text-main);
+      font-size: 0.88rem;
+      font-weight: 600;
+      outline: none;
+      min-width: 220px;
+    }
+
+    .browse-collections-btn {
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
+      color: var(--text-main);
+      padding: 0.5rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .browse-collections-btn:hover {
+      background: var(--active-card);
+      border-color: var(--accent);
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 860px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .reader-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 1.25rem 1rem;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      min-height: auto;
+    }
+
+    @media (min-width: 640px) {
+      .reader-card {
+        padding: 2rem 1.75rem;
+        border-radius: 20px;
+        min-height: 440px;
+      }
+    }
+
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.85rem;
+    }
+
+    .step-badge {
+      background: var(--tag-bg);
+      color: var(--tag-color);
+      font-size: clamp(0.7rem, 2.2vw, 0.78rem);
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .status-wave {
+      display: flex;
+      align-items: center;
+      gap: 3.5px;
+      height: 18px;
+    }
+
+    .wave-bar {
+      width: 3.5px;
+      background: var(--accent);
+      border-radius: 4px;
+      height: 4px;
+      transition: height 0.15s ease;
+    }
+
     .status-wave.speaking .wave-bar:nth-child(1) { animation: wave 0.8s infinite ease-in-out; }
     .status-wave.speaking .wave-bar:nth-child(2) { animation: wave 0.8s 0.15s infinite ease-in-out; }
     .status-wave.speaking .wave-bar:nth-child(3) { animation: wave 0.8s 0.3s infinite ease-in-out; }
     .status-wave.speaking .wave-bar:nth-child(4) { animation: wave 0.8s 0.45s infinite ease-in-out; }
     .status-wave.speaking .wave-bar:nth-child(5) { animation: wave 0.8s 0.2s infinite ease-in-out; }
-    @keyframes wave { 0%, 100% { height: 4px; } 50% { height: 18px; } }
-    .step-title { font-size: clamp(1.05rem, 3.5vw, 1.25rem); font-weight: 700; color: var(--accent); margin-bottom: 0.65rem; line-height: 1.35; }
-    .devanagari-container { font-family: 'Noto Sans Devanagari', serif; font-size: clamp(1.35rem, 4.6vw, 1.95rem); line-height: 1.75; font-weight: 700; color: var(--text-main); text-align: center; padding: 0.85rem 0.25rem; min-height: 110px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; user-select: text; word-break: keep-all; overflow-wrap: break-word; }
-    .word-token { display: inline-block; padding: 0.12rem 0.35rem; margin: 0.12rem 0.15rem; border-radius: 6px; transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease; }
-    .word-token.highlight { background: var(--highlight-word) !important; color: var(--highlight-text) !important; transform: scale(1.06); box-shadow: 0 3px 10px rgba(139, 74, 43, 0.35); border-radius: 6px; }
+
+    @keyframes wave {
+      0%, 100% { height: 4px; }
+      50% { height: 18px; }
+    }
+
+    .step-title {
+      font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.65rem;
+      line-height: 1.35;
+    }
+
+    .devanagari-container {
+      font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+      font-size: clamp(1.35rem, 4.6vw, 1.95rem);
+      line-height: 1.75;
+      font-weight: 700;
+      color: var(--text-main);
+      text-align: center;
+      padding: 0.85rem 0.25rem;
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      user-select: text;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+
+    .word-token {
+      display: inline-block;
+      padding: 0.12rem 0.35rem;
+      margin: 0.12rem 0.15rem;
+      border-radius: 6px;
+      transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease;
+    }
+
+    .word-token.highlight {
+      background: var(--highlight-word) !important;
+      color: var(--highlight-text) !important;
+      transform: scale(1.06);
+      box-shadow: 0 3px 10px rgba(139, 74, 43, 0.35);
+      border-radius: 6px;
+    }
+
     .phonetic-text { display: none !important; }
-    .meaning-box { background: var(--control-bg); border-left: 3.5px solid var(--accent); border-radius: 8px; padding: 0.75rem 0.85rem; font-size: clamp(0.8rem, 2.4vw, 0.88rem); color: var(--text-muted); margin-top: 0.75rem; line-height: 1.5; transition: all 0.25s ease; }
-    .meaning-box.speaking-explanation { border-left-color: #d97706; background: #e6dacb; box-shadow: 0 0 0 2px var(--accent-glow); }
-    .meaning-header { display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+
+    .meaning-box {
+      background: var(--control-bg);
+      border-left: 3.5px solid var(--accent);
+      border-radius: 8px;
+      padding: 0.75rem 0.85rem;
+      font-size: clamp(0.8rem, 2.4vw, 0.88rem);
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      line-height: 1.5;
+      transition: all 0.25s ease;
+    }
+
+    .meaning-box.speaking-explanation {
+      border-left-color: #d97706;
+      background: #e6dacb;
+      box-shadow: 0 0 0 2px var(--accent-glow);
+    }
+
+    .meaning-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
     .meaning-content { margin-top: 0.45rem; }
     .meaning-section { margin-bottom: 0.4rem; }
     .meaning-section:last-child { margin-bottom: 0; }
     .meaning-tag { font-weight: 700; color: var(--accent); display: inline-block; margin-right: 0.25rem; }
-    .ahuti-repeat-box { margin-top: 0.85rem; background: var(--control-bg); border: 1.5px solid var(--accent); border-radius: 12px; padding: 0.75rem 0.85rem; display: flex; flex-direction: column; gap: 0.65rem; box-shadow: 0 4px 14px var(--accent-glow); }
-    .ahuti-repeat-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem; }
+
+    .ahuti-repeat-box {
+      margin-top: 0.85rem;
+      background: var(--control-bg);
+      border: 1.5px solid var(--accent);
+      border-radius: 12px;
+      padding: 0.75rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+
+    .ahuti-repeat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
     .ahuti-title-group { display: flex; align-items: center; gap: 0.5rem; }
     .ahuti-flame-icon { font-size: 1.25rem; line-height: 1; }
     .ahuti-box-title { font-size: clamp(0.82rem, 2.5vw, 0.92rem); font-weight: 700; color: var(--accent); }
     .ahuti-box-sub { font-size: clamp(0.68rem, 2vw, 0.75rem); color: var(--text-muted); }
-    .ahuti-counter-row { display: flex; justify-content: space-between; align-items: center; background: var(--card-bg); border: 1px solid var(--control-border); border-radius: 9px; padding: 0.45rem 0.65rem; flex-wrap: wrap; gap: 0.5rem; }
+    .ahuti-counter-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card-bg);
+      border: 1px solid var(--control-border);
+      border-radius: 9px;
+      padding: 0.45rem 0.65rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
     .ahuti-counter-stat { display: flex; align-items: center; gap: 0.5rem; }
     .ahuti-stat-label { font-size: clamp(0.72rem, 2.2vw, 0.8rem); font-weight: 600; color: var(--text-muted); }
-    .ahuti-stat-badge { display: inline-flex; align-items: baseline; gap: 0.2rem; background: var(--active-card); border: 1px solid var(--card-border); padding: 0.15rem 0.5rem; border-radius: 6px; }
+    .ahuti-stat-badge {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.2rem;
+      background: var(--active-card);
+      border: 1px solid var(--card-border);
+      padding: 0.15rem 0.5rem;
+      border-radius: 6px;
+    }
+
     .ahuti-count-num { font-size: 1.25rem; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
     .ahuti-count-total { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); }
     .ahuti-btn-group { display: flex; align-items: center; gap: 0.3rem; }
-    .ahuti-adj-btn { background: var(--control-bg); border: 1px solid var(--control-border); color: var(--text-main); padding: 0.35rem 0.65rem; min-height: 36px; min-width: 38px; border-radius: 7px; font-size: 0.8rem; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+    .ahuti-adj-btn {
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
+      color: var(--text-main);
+      padding: 0.35rem 0.65rem;
+      min-height: 36px;
+      min-width: 38px;
+      border-radius: 7px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
     .ahuti-adj-btn:hover, .ahuti-adj-btn:active { background: var(--accent); color: #fff; border-color: var(--accent); }
     .ahuti-adj-btn.reset { color: var(--text-muted); }
-    .ahuti-adj-btn.reset:hover { background: #dc2626; border-color: #dc2626; color: #fff; }
-    .controls-wrapper { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
-    .progress-bar-container { width: 100%; height: 5px; background: var(--slider-track); border-radius: 9999px; overflow: hidden; }
-    .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), #d97706); width: 0%; transition: width 0.3s ease; }
-    .buttons-row { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; }
-    .btn { border: none; outline: none; padding: 0.6rem 0.95rem; min-height: 42px; border-radius: 11px; font-weight: 600; font-size: clamp(0.82rem, 2.5vw, 0.9rem); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; transition: all 0.2s ease; }
-    .btn:disabled { opacity: 0.45; cursor: not-allowed; }
-    .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 4px 14px var(--accent-glow); }
-    .btn-primary:hover:not(:disabled) { background: var(--accent-hover); transform: translateY(-2px); }
-    .btn-secondary { background: var(--control-bg); border: 1px solid var(--control-border); color: var(--text-main); }
-    .btn-secondary:hover:not(:disabled) { background: var(--card-bg); border-color: var(--accent); transform: translateY(-1px); }
-    .btn-play-hero { width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #ea580c); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; border: none; cursor: pointer; box-shadow: 0 6px 18px var(--accent-glow); transition: transform 0.2s ease; flex-shrink: 0; }
-    .btn-play-hero:hover, .btn-play-hero:active { transform: scale(1.06); }
-    .toggle-pill { display: inline-flex; align-items: center; gap: 0.45rem; font-size: clamp(0.78rem, 2.4vw, 0.85rem); cursor: pointer; user-select: none; color: var(--text-muted); font-weight: 500; min-height: 38px; }
+    .ahuti-adj-btn.reset:hover, .ahuti-adj-btn.reset:active { background: #dc2626; border-color: #dc2626; color: #fff; }
+
+    .controls-wrapper {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 5px;
+      background: var(--slider-track);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), #d97706);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .buttons-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      outline: none;
+      padding: 0.6rem 0.95rem;
+      min-height: 42px;
+      border-radius: 11px;
+      font-weight: 600;
+      font-size: clamp(0.82rem, 2.5vw, 0.9rem);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+      touch-action: manipulation;
+    }
+
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+    .btn-primary:hover:not(:disabled) {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
+      color: var(--text-main);
+    }
+    .btn-secondary:hover:not(:disabled) {
+      background: var(--card-bg);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .btn-play-hero {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #ea580c);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 18px var(--accent-glow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      touch-action: manipulation;
+      flex-shrink: 0;
+    }
+
+    .btn-play-hero:hover, .btn-play-hero:active {
+      transform: scale(1.06);
+      box-shadow: 0 8px 24px var(--accent-glow);
+    }
+
+    .toggle-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: clamp(0.78rem, 2.4vw, 0.85rem);
+      cursor: pointer;
+      user-select: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      min-height: 38px;
+    }
+
     .toggle-pill input { display: none; }
-    .toggle-track { width: 36px; height: 20px; background: var(--slider-track); border-radius: 20px; position: relative; transition: background 0.2s; flex-shrink: 0; }
-    .toggle-track::before { content: ""; position: absolute; width: 14px; height: 14px; background: #fff; border-radius: 50%; top: 3px; left: 3px; transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-    .toggle-pill input:checked + .toggle-track { background: var(--accent); }
-    .toggle-pill input:checked + .toggle-track::before { transform: translateX(16px); }
-    .side-panel { display: flex; flex-direction: column; gap: 1rem; }
-    .panel-box { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 1rem; box-shadow: var(--card-shadow); }
-    @media (min-width: 640px) { .panel-box { border-radius: 16px; padding: 1.25rem; } }
-    .panel-title { font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; justify-content: space-between; color: var(--text-main); }
-    .collapsible-header { cursor: pointer; user-select: none; padding: 0.2rem 0; }
-    .chevron-icon { display: inline-block; transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1); font-size: 0.75rem; color: var(--accent); }
+
+    .toggle-track {
+      width: 36px;
+      height: 20px;
+      background: var(--slider-track);
+      border-radius: 20px;
+      position: relative;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+
+    .toggle-track::before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .toggle-pill input:checked + .toggle-track {
+      background: var(--accent);
+    }
+
+    .toggle-pill input:checked + .toggle-track::before {
+      transform: translateX(16px);
+    }
+
+    .repeat-toggle-pill input:checked + .toggle-track {
+      background: #c2410c;
+    }
+
+    .side-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .panel-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    @media (min-width: 640px) {
+      .panel-box {
+        border-radius: 16px;
+        padding: 1.25rem;
+      }
+    }
+
+    .panel-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-main);
+    }
+
+    .collapsible-header {
+      cursor: pointer;
+      user-select: none;
+      padding: 0.2rem 0;
+      transition: opacity 0.2s;
+    }
+
+    .chevron-icon {
+      display: inline-block;
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 0.75rem;
+      color: var(--accent);
+    }
+
     .chevron-icon.expanded { transform: rotate(90deg); }
-    .settings-group { display: flex; flex-direction: column; gap: 0.9rem; }
-    .collapsible-body { display: none; margin-top: 0.9rem; border-top: 1px dashed var(--divider); padding-top: 0.85rem; }
+
+    .settings-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .collapsible-body {
+      display: none;
+      margin-top: 0.9rem;
+      border-top: 1px dashed var(--divider);
+      padding-top: 0.85rem;
+    }
+
     .collapsible-body.expanded { display: flex; }
-    .style-presets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin-top: 0.25rem; }
-    .style-preset-btn { padding: 0.4rem 0.5rem; border: 1px solid var(--control-border); background: var(--control-bg); color: var(--text-main); border-radius: 8px; font-size: 0.76rem; font-weight: 600; cursor: pointer; text-align: center; transition: all 0.2s ease; }
-    .style-preset-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .slider-row { display: flex; flex-direction: column; gap: 0.35rem; }
-    .slider-header { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--text-muted); }
-    input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 5px; background: var(--slider-track); border-radius: 4px; outline: none; }
-    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); cursor: pointer; }
-    .voice-select { width: 100%; padding: 0.55rem 0.75rem; background: var(--control-bg); border: 1px solid var(--control-border); color: var(--text-main); border-radius: 10px; font-size: 0.82rem; outline: none; cursor: pointer; }
-    .step-list { display: flex; flex-direction: column; gap: 0.5rem; max-height: 280px; overflow-y: auto; padding-right: 0.25rem; }
-    .step-item { padding: 0.75rem 0.85rem; background: var(--control-bg); border: 1px solid transparent; border-radius: 10px; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 0.75rem; }
-    .step-item.active { background: var(--active-card); border-color: var(--accent); }
-    .step-item-number { width: 24px; height: 24px; border-radius: 50%; background: var(--card-bg); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; }
-    .step-item.active .step-item-number { background: var(--accent); color: #fff; }
-    .step-item-info { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.85rem; font-weight: 600; color: var(--text-main); }
-    .modal-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; z-index: 100; opacity: 0; pointer-events: none; transition: opacity 0.25s ease; padding: 1rem; }
+
+    .style-presets-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem;
+      margin-top: 0.25rem;
+    }
+
+    .style-preset-btn {
+      padding: 0.4rem 0.5rem;
+      border: 1px solid var(--control-border);
+      background: var(--control-bg);
+      color: var(--text-main);
+      border-radius: 8px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .style-preset-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .slider-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .slider-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 5px;
+      background: var(--slider-track);
+      border-radius: 4px;
+      outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+    }
+
+    .voice-select {
+      width: 100%;
+      padding: 0.55rem 0.75rem;
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
+      color: var(--text-main);
+      border-radius: 10px;
+      font-size: 0.82rem;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .step-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-height: 280px;
+      overflow-y: auto;
+      padding-right: 0.25rem;
+    }
+
+    .step-item {
+      padding: 0.75rem 0.85rem;
+      background: var(--control-bg);
+      border: 1px solid transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .step-item.active {
+      background: var(--active-card);
+      border-color: var(--accent);
+    }
+
+    .step-item-number {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-item.active .step-item-number {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .step-item-info {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      padding: 1rem;
+    }
+
     .modal-backdrop.open { opacity: 1; pointer-events: auto; }
-    .modal-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 18px; width: 100%; max-width: 520px; padding: 1.6rem; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); transform: translateY(20px); transition: transform 0.25s ease; display: flex; flex-direction: column; gap: 1rem; }
+
+    .modal-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      width: 100%;
+      max-width: 520px;
+      padding: 1.6rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      transform: translateY(20px);
+      transition: transform 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
     .modal-backdrop.open .modal-card { transform: translateY(0); }
-    .collection-modal-grid { display: flex; flex-direction: column; gap: 0.6rem; max-height: 380px; overflow-y: auto; padding-right: 0.25rem; }
-    .collection-card-item { padding: 0.75rem 0.95rem; background: var(--control-bg); border: 1px solid var(--control-border); border-radius: 12px; cursor: pointer; transition: all 0.2s; }
-    .collection-card-item.active { border-color: var(--accent); background: var(--active-card); }
+
+    .collection-modal-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 0.25rem;
+    }
+
+    .collection-card-item {
+      padding: 0.75rem 0.95rem;
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .collection-card-item.active {
+      border-color: var(--accent);
+      background: var(--active-card);
+    }
+
     .collection-card-title { font-weight: 700; font-size: 0.92rem; color: var(--text-main); }
     .collection-card-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; }
     .collection-card-badge { font-size: 0.7rem; font-weight: 700; color: var(--accent); margin-top: 0.3rem; }
+
     .input-field { display: flex; flex-direction: column; gap: 0.35rem; }
     .input-field label { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); }
-    .input-field input, .input-field textarea { padding: 0.65rem 0.85rem; border-radius: 10px; border: 1px solid var(--control-border); background: var(--control-bg); color: var(--text-main); font-size: 0.9rem; font-family: inherit; outline: none; }
+    .input-field input, .input-field textarea {
+      padding: 0.65rem 0.85rem;
+      border-radius: 10px;
+      border: 1px solid var(--control-border);
+      background: var(--control-bg);
+      color: var(--text-main);
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+    }
     .input-field textarea { resize: vertical; min-height: 80px; font-family: 'Noto Sans Devanagari', inherit; }
-    .toast { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%) translateY(40px); background: #1e1b18; color: #fff; padding: 0.75rem 1.4rem; border-radius: 30px; font-size: 0.85rem; opacity: 0; pointer-events: none; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); z-index: 200; box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+
+    .toast {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(40px);
+      background: #1e1b18;
+      color: #fff;
+      padding: 0.75rem 1.4rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 200;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
     .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
-    .keyboard-legend { text-align: center; font-size: 0.78rem; color: var(--text-hint); margin-top: 0.5rem; }
-    .kbd { background: var(--control-bg); border: 1px solid var(--control-border); border-radius: 4px; padding: 0.15rem 0.4rem; font-size: 0.72rem; font-family: monospace; }
+
+    .keyboard-legend {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-hint);
+      margin-top: 0.5rem;
+    }
+    .kbd {
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
+      border-radius: 4px;
+      padding: 0.15rem 0.4rem;
+      font-size: 0.72rem;
+      font-family: monospace;
+    }
   </style>
 </head>
 <body>
 
   <div class="app-container">
+    <!-- Android Missing TTS Notice -->
+    <div class="tts-alert-banner" id="androidTtsBanner">
+      <button class="tts-alert-close" id="closeTtsBannerBtn" title="बंद करें">✕</button>
+      <strong>⚠️ भारतीय भाषा वाक् (TTS) उपलब्ध नहीं है</strong>
+      <span>डिवाइस पर कोई भी भारतीय भाषा TTS आवाज़ उपलब्ध नहीं है। शुद्ध उच्चारण हेतु कृपया निम्नलिखित पैकेज इंस्टॉल करें:</span>
+      <div class="tts-links">
+        <a class="tts-install-link" href="samsungapps://ProductDetail/com.samsung.SMT.lang_hi_in" target="_blank" rel="noopener">
+          📲 Samsung TTS Hindi Voice 1 (GalaxyStore)
+        </a>
+        <a class="tts-install-link" href="https://play.google.com/store/apps/details?id=com.google.android.tts" target="_blank" rel="noopener">
+          🤖 Speech Recognition & Synthesis (PlayStore)
+        </a>
+      </div>
+      <span style="font-size:0.75rem; opacity: 0.9; margin-top: 0.2rem;">नोट: वर्तमान में स्वचालित रूप से क्लाउड टीटीएस (Cloud TTS) का उपयोग किया जा रहा है।</span>
+    </div>
+
     <header>
       <div class="brand">
         <div class="brand-icon">🪔</div>
@@ -174,6 +971,7 @@
         </div>
       </div>
       <div class="top-actions">
+        <button class="icon-btn pwa-install-btn" id="pwaInstallBtn" title="ऐप इंस्टॉल करें">📥 ऐप इंस्टॉल</button>
         <button class="icon-btn" id="addStepBtn" title="नया चरण जोड़ें (Add Custom Step)">➕</button>
       </div>
     </header>
@@ -224,7 +1022,7 @@
               <label class="toggle-pill">
                 <input type="checkbox" id="ahutiRepeatToggle" checked>
                 <div class="toggle-track"></div>
-                <span style="font-weight: 700; color: var(--text-main);">दोहराव (Repeat)</span>
+                <span style="font-weight: 700; color: var(--text-main);">आहुति दोहराव</span>
               </label>
             </div>
             <div class="ahuti-counter-row">
@@ -255,12 +1053,18 @@
               <button class="btn-secondary" id="nextBtn">अगला ▶</button>
             </div>
             <div style="display: flex; gap: 0.65rem; align-items: center; flex-wrap: wrap;">
+              <!-- Indefinite Mantra Repeat Toggle Visible Everywhere -->
+              <label class="toggle-pill repeat-toggle-pill" title="वर्तमान मंत्र की निरंतर पुनरावृत्ति करें">
+                <input type="checkbox" id="mantraRepeatToggle">
+                <div class="toggle-track"></div>
+                <span style="font-weight: 700; color: #8b4a2b;">🔁 पुनरावृत्ति (Repeat)</span>
+              </label>
               <label class="toggle-pill" id="explainToggleWrapper">
                 <input type="checkbox" id="explainToggle" checked>
                 <div class="toggle-track"></div>
-                <span style="font-weight: 700; color: var(--text-main);">व्याख्या (Explain)</span>
+                <span style="font-weight: 700; color: var(--text-main);">व्याख्या</span>
               </label>
-              <label class="toggle-pill">
+              <label class="toggle-pill" id="autoAdvanceToggleWrapper">
                 <input type="checkbox" id="autoAdvanceToggle" checked>
                 <div class="toggle-track"></div>
                 <span>स्वचालित (Auto)</span>
@@ -371,7 +1175,7 @@
 
   <!-- APPLICATION LOGIC & AUDIO CONTROLLER -->
   <script>
-    const STATE_KEY = "eesh_vandan_full_state_v12";
+    const STATE_KEY = "eesh_vandan_full_state_v14";
 
     let state = {
       currentPreset: "gayatri_havan",
@@ -385,9 +1189,11 @@
       explainEnabled: true,
       enableChime: true,
       ahutiRepeatEnabled: true,
+      mantraRepeatEnabled: false,
       ahutiCount: 1,
       isVoicePanelOpen: false,
-      isMeaningOpen: true
+      isMeaningOpen: true,
+      bannerDismissed: false
     };
 
     function loadState() {
@@ -495,6 +1301,9 @@
       return out.replace(/\s+/g, ' ').trim();
     }
 
+    const INDIAN_LANG_REGEX = /^(sa|san|hi|mr|gu|bn|ta|te|kn|ml|pa|or|as|ur)([-_]|$)/i;
+    const isAndroidDevice = () => /Android/i.test(navigator.userAgent || navigator.vendor || window.opera);
+
     window.__ttsActiveUtterances = [];
 
     class SpeechController {
@@ -510,57 +1319,97 @@
         this.failedVoiceURIs = new Set();
         this.cloudAudio = null;
       }
+
       initVoices() {
-        if (!this.synth) { renderVoiceOptions(); return; }
+        if (!this.synth) {
+          this.checkAndroidVoiceAvailability([]);
+          renderVoiceOptions();
+          return;
+        }
         const update = () => {
           const loaded = this.synth.getVoices() || [];
-          if (loaded.length > 0) this.voices = loaded;
+          if (loaded.length > 0) {
+            this.voices = loaded;
+            this.checkAndroidVoiceAvailability(this.voices);
+          }
           renderVoiceOptions();
         };
         update();
         if (this.synth.onvoiceschanged !== undefined) this.synth.onvoiceschanged = update;
-        setTimeout(update, 120); setTimeout(update, 400); setTimeout(update, 1000);
+        setTimeout(update, 150);
+        setTimeout(update, 500);
+        setTimeout(update, 1200);
       }
-      matchesAllowedTag(voice) {
+
+      checkAndroidVoiceAvailability(voices) {
+        if (!isAndroidDevice()) return;
+        const indicVoiceCount = voices.filter(v => this.isIndianVoice(v)).length;
+        const banner = document.getElementById("androidTtsBanner");
+        if (indicVoiceCount === 0 && !state.bannerDismissed) {
+          if (banner) banner.classList.add("active");
+        } else {
+          if (banner) banner.classList.remove("active");
+        }
+      }
+
+      isIndianVoice(voice) {
         if (!voice) return false;
-        const combined = `${voice.lang || ""} ${voice.name || ""} ${voice.voiceURI || ""}`.toLowerCase();
-        return /hi[-_]in/i.test(combined) || /sa[-_]in/i.test(combined) || /san[-_]in/i.test(combined) || combined.startsWith("hi") || combined.startsWith("sa");
+        const tag = (voice.lang || "").toLowerCase();
+        const details = `${voice.name || ""} ${voice.voiceURI || ""}`.toLowerCase();
+        if (INDIAN_LANG_REGEX.test(tag)) return true;
+        return /sanskrit|hindi|marathi|gujarati|bengali|tamil|telugu|kannada|malayalam|punjabi/i.test(details);
       }
-      isSaIn(voice) {
+
+      isSanskritVoice(voice) {
         if (!voice) return false;
-        const combined = `${voice.voiceURI} ${voice.name} ${voice.lang}`.toLowerCase();
-        return combined.includes("sa_in") || combined.includes("sa-in") || combined.includes("san_in") || combined.includes("san-in");
+        const tag = (voice.lang || "").toLowerCase();
+        const details = `${voice.voiceURI || ""} ${voice.name || ""}`.toLowerCase();
+        return tag.startsWith("sa") || tag.startsWith("san") || details.includes("sanskrit") || details.includes("sa_in") || details.includes("sa-in");
       }
+
+      isHindiVoice(voice) {
+        if (!voice) return false;
+        const tag = (voice.lang || "").toLowerCase();
+        const details = `${voice.voiceURI || ""} ${voice.name || ""}`.toLowerCase();
+        return (tag.startsWith("hi") || details.includes("hindi")) && !this.isSanskritVoice(voice);
+      }
+
       isLatinVoice(voice) {
         if (!voice) return false;
         const combined = `${voice.voiceURI} ${voice.name} ${voice.lang}`.toLowerCase();
         return combined.includes("latn") || combined.includes("#latn");
       }
+
       getVoiceByURI(uri) {
         if (!this.voices || this.voices.length === 0) this.voices = this.synth ? (this.synth.getVoices() || []) : [];
         return this.voices.find(v => v.voiceURI === uri);
       }
-      getDefaultSaOrHiVoice(preferHindi = false) {
+
+      // Internal Preference: Sanskrit > Hindi > Any other Indian voice > Fallback to Cloud TTS
+      getPreferredVoice(preferHindi = false) {
         if (!this.voices || this.voices.length === 0) this.voices = this.synth ? (this.synth.getVoices() || []) : [];
-        const usable = this.voices.filter(v => !this.failedVoiceURIs.has(v.voiceURI));
-        const indic = usable.filter(v => this.matchesAllowedTag(v));
+        const usable = this.voices.filter(v => !this.failedVoiceURIs.has(v.voiceURI) && !this.isLatinVoice(v));
+
         if (preferHindi) {
-          const hi = indic.find(v => !this.isSaIn(v) && !this.isLatinVoice(v));
+          const hi = usable.find(v => this.isHindiVoice(v));
           if (hi) return hi;
-          const anyHi = indic.find(v => !this.isSaIn(v));
-          if (anyHi) return anyHi;
         }
-        if (indic.length > 0) {
-          if (!preferHindi) {
-            const sa = indic.find(v => this.isSaIn(v));
-            if (sa) return sa;
-          }
-          const hi = indic.find(v => !this.isLatinVoice(v));
-          if (hi) return hi;
-          return indic[0];
-        }
-        return usable.find(v => v.default) || usable[0] || null;
+
+        // 1. Sanskrit
+        const sanskritVoice = usable.find(v => this.isSanskritVoice(v));
+        if (sanskritVoice && !preferHindi) return sanskritVoice;
+
+        // 2. Hindi
+        const hindiVoice = usable.find(v => this.isHindiVoice(v));
+        if (hindiVoice) return hindiVoice;
+
+        // 3. Other Indian
+        const otherIndianVoice = usable.find(v => this.isIndianVoice(v));
+        if (otherIndianVoice) return otherIndianVoice;
+
+        return null;
       }
+
       splitIntoPhrases(text) {
         if (!text) return [];
         const raw = text.split(/[\n।॥;]+/);
@@ -575,42 +1424,109 @@
         }
         return chunks.length > 0 ? chunks : [text];
       }
+
+      // Cloud TTS Implementation matching reference page[cite: 2]
       playCloudStream(text, options = {}) {
+        if (!navigator.onLine) {
+          showToast("ऑफ़लाइन: सिस्टम वाक् इंजन का प्रयोग किया जा रहा है");
+          this.speakNative(text, { ...options, forceNative: true });
+          return;
+        }
+
         this.stop();
         this.isSpeaking = true;
         updatePlaybackUI(true);
+
         const clean = sanitizeForHindiTTS(text);
-        if (!clean) { this.stop(); if (this.onEndCallback) this.onEndCallback(); return; }
+        if (!clean) {
+          this.stop();
+          if (this.onEndCallback) this.onEndCallback();
+          return;
+        }
+
         const phrases = this.splitIntoPhrases(clean);
         let cur = 0;
-        const playNextCloud = () => {
+
+        const playNextCloudPhrase = () => {
           if (cur >= phrases.length) {
             this.isSpeaking = false;
             updatePlaybackUI(false);
             if (this.onEndCallback) this.onEndCallback();
             return;
           }
-          const enc = encodeURIComponent(phrases[cur].slice(0, 180));
+
+          const phrase = phrases[cur];
+          const enc = encodeURIComponent(phrase.slice(0, 180));
+          // Reference implementation URL format[cite: 2]
           const streamUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=hi&client=tw-ob&q=${enc}`;
-          if (this.cloudAudio) { this.cloudAudio.pause(); this.cloudAudio = null; }
+
+          if (this.cloudAudio) {
+            this.cloudAudio.pause();
+            this.cloudAudio = null;
+          }
+
           const audio = new Audio(streamUrl);
           this.cloudAudio = audio;
           audio.playbackRate = Math.max(0.7, Math.min(1.4, options.rate || state.speechRate || 0.88));
-          audio.onplay = () => { if (cur === 0 && options.onStart) options.onStart(); };
-          audio.onended = () => { cur++; playNextCloud(); };
-          audio.onerror = () => { this.speakNative(text, { ...options, forceNative: true }); };
-          audio.play().catch(e => { this.speakNative(text, { ...options, forceNative: true }); });
+
+          audio.onplay = () => {
+            if (cur === 0 && options.onStart) options.onStart();
+          };
+
+          audio.onended = () => {
+            cur++;
+            playNextCloudPhrase();
+          };
+
+          audio.onerror = () => {
+            console.warn("Cloud stream encountered error, switching to native speech");
+            this.speakNative(text, { ...options, forceNative: true });
+          };
+
+          audio.play().catch(e => {
+            console.warn("Cloud stream play failed:", e);
+            this.speakNative(text, { ...options, forceNative: true });
+          });
         };
-        playNextCloud();
+
+        playNextCloudPhrase();
       }
+
       speakNative(text, options = {}) {
-        if (!this.synth) { if (this.onEndCallback) this.onEndCallback(); return; }
+        if (!this.synth) {
+          if (!options.forceNative) this.playCloudStream(text, options);
+          else if (this.onEndCallback) this.onEndCallback();
+          return;
+        }
+
+        let chosenVoice = null;
+        if (options.voiceURI && !options.voiceURI.startsWith("cloud_") && !options.voiceURI.startsWith("auto") && !this.failedVoiceURIs.has(options.voiceURI)) {
+          chosenVoice = this.getVoiceByURI(options.voiceURI);
+        }
+
+        // Voice preference hierarchy
+        if (!chosenVoice) {
+          chosenVoice = this.getPreferredVoice(options.preferHindi || false);
+        }
+
+        // Fallback to Cloud TTS if no Indian voice available
+        if (!chosenVoice && !options.forceNative) {
+          console.info("No Indic voice detected; falling back to Cloud TTS");
+          this.playCloudStream(text, options);
+          return;
+        }
+
         const rawChunks = options.singleUtterance ? [text] : this.splitIntoPhrases(text);
         this.activeChunks = rawChunks.filter(c => {
           const clean = sanitizeForHindiTTS(c);
           return clean && clean.replace(/[,.\s]/g, '').length > 0;
         });
-        if (this.activeChunks.length === 0) { if (this.onEndCallback) this.onEndCallback(); return; }
+
+        if (this.activeChunks.length === 0) {
+          if (this.onEndCallback) this.onEndCallback();
+          return;
+        }
+
         this.chunkIndex = 0;
         this.isSpeaking = true;
         updatePlaybackUI(true);
@@ -624,36 +1540,39 @@
             if (this.onEndCallback) this.onEndCallback();
             return;
           }
+
           const currentText = this.activeChunks[this.chunkIndex];
           const cleanText = sanitizeForHindiTTS(currentText);
+
           if (!cleanText || cleanText.replace(/[,.\s]/g, '').length === 0) {
-            this.chunkIndex++; speakNextChunk(); return;
+            this.chunkIndex++;
+            speakNextChunk();
+            return;
           }
+
           try { if (this.synth.paused) this.synth.resume(); } catch (e) {}
 
-          let chosenVoice = null;
           let safeLang = "hi-IN";
-          if (options.voiceURI && !options.voiceURI.startsWith("cloud_") && !options.voiceURI.startsWith("auto") && !this.failedVoiceURIs.has(options.voiceURI)) {
-            chosenVoice = this.getVoiceByURI(options.voiceURI);
-          }
-          if (!chosenVoice) chosenVoice = this.getDefaultSaOrHiVoice(options.preferHindi || false);
-
           let textForVoice = cleanText;
+
           if (chosenVoice) {
             const vLang = (chosenVoice.lang || "").toLowerCase();
             if (vLang.startsWith("sa")) safeLang = "sa-IN";
             else if (vLang.startsWith("hi")) safeLang = "hi-IN";
-            else { safeLang = chosenVoice.lang || "hi-IN"; textForVoice = devanagariToPhoneticLatin(cleanText) || cleanText; }
-            if (this.isLatinVoice(chosenVoice)) textForVoice = devanagariToPhoneticLatin(cleanText) || cleanText;
-          } else {
-            safeLang = options.preferHindi ? "hi-IN" : "sa-IN";
+            else safeLang = chosenVoice.lang || "hi-IN";
+
+            if (this.isLatinVoice(chosenVoice)) {
+              textForVoice = devanagariToPhoneticLatin(cleanText) || cleanText;
+            }
           }
 
           const utterance = new SpeechSynthesisUtterance(textForVoice);
           this.currentUtterance = utterance;
           window.__ttsActiveUtterances = [utterance];
+
           utterance.rate = Math.max(0.6, Math.min(1.4, options.rate || state.speechRate || 0.88));
           utterance.pitch = Math.max(0.7, Math.min(1.3, options.pitch || state.speechPitch || 1.00));
+
           if (chosenVoice) utterance.voice = chosenVoice;
           utterance.lang = safeLang;
 
@@ -662,22 +1581,28 @@
             updatePlaybackUI(true);
             if (this.chunkIndex === 0 && options.onStart) options.onStart();
           };
+
           utterance.onboundary = (event) => {
-            if (this.onWordBoundary && options.singleUtterance) this.onWordBoundary(event.charIndex, event.charLength, currentText);
+            if (this.onWordBoundary && options.singleUtterance) {
+              this.onWordBoundary(event.charIndex, event.charLength, currentText);
+            }
           };
+
           utterance.onend = () => {
-            this.chunkIndex++; window.__ttsActiveUtterances = []; speakNextChunk();
+            this.chunkIndex++;
+            window.__ttsActiveUtterances = [];
+            speakNextChunk();
           };
+
           utterance.onerror = (event) => {
             window.__ttsActiveUtterances = [];
             this.currentUtterance = null;
             if (event.error === 'canceled' || event.error === 'interrupted') {
-              this.isSpeaking = false; updatePlaybackUI(false); return;
+              this.isSpeaking = false;
+              updatePlaybackUI(false);
+              return;
             }
             if (chosenVoice && chosenVoice.voiceURI) this.failedVoiceURIs.add(chosenVoice.voiceURI);
-            if (safeLang !== "hi-IN") {
-              safeLang = "hi-IN"; setTimeout(() => speakNextChunk(), 120); return;
-            }
             if (!options.forceNative) this.playCloudStream(text, options);
             else { this.stop(); if (this.onEndCallback) this.onEndCallback(); }
           };
@@ -690,12 +1615,18 @@
             else this.stop();
           }
         };
+
         speakNextChunk();
       }
+
       speak(text, options = {}) {
-        if ((options.voiceURI || "").startsWith("cloud_")) { this.playCloudStream(text, options); return; }
+        if ((options.voiceURI || "").startsWith("cloud_")) {
+          this.playCloudStream(text, options);
+          return;
+        }
         this.speakNative(text, options);
       }
+
       stop() {
         this.activeChunks = [];
         this.chunkIndex = 0;
@@ -703,8 +1634,14 @@
         this.currentUtterance = null;
         window.__ttsActiveUtterances = [];
         stopSyllableWeightedHighlighting();
-        if (this.cloudAudio) { try { this.cloudAudio.pause(); this.cloudAudio = null; } catch (e) {} }
-        if (this.synth) { try { this.synth.cancel(); if (this.synth.paused) this.synth.resume(); } catch (e) {} }
+
+        if (this.cloudAudio) {
+          try { this.cloudAudio.pause(); this.cloudAudio = null; } catch (e) {}
+        }
+
+        if (this.synth) {
+          try { this.synth.cancel(); if (this.synth.paused) this.synth.resume(); } catch (e) {}
+        }
         updatePlaybackUI(false);
         clearWordHighlights();
       }
@@ -712,6 +1649,9 @@
 
     const dom = {
       addStepBtn: document.getElementById("addStepBtn"),
+      pwaInstallBtn: document.getElementById("pwaInstallBtn"),
+      androidTtsBanner: document.getElementById("androidTtsBanner"),
+      closeTtsBannerBtn: document.getElementById("closeTtsBannerBtn"),
       collectionDropdown: document.getElementById("collectionDropdown"),
       openCollectionModalBtn: document.getElementById("openCollectionModalBtn"),
       collectionModal: document.getElementById("collectionModal"),
@@ -732,6 +1672,7 @@
       prevBtn: document.getElementById("prevBtn"),
       playBtn: document.getElementById("playBtn"),
       nextBtn: document.getElementById("nextBtn"),
+      mantraRepeatToggle: document.getElementById("mantraRepeatToggle"),
       autoAdvanceToggle: document.getElementById("autoAdvanceToggle"),
       voicePanelToggle: document.getElementById("voicePanelToggle"),
       voicePanelBody: document.getElementById("voicePanelBody"),
@@ -769,6 +1710,7 @@
     let initialHighlightDelayTimer = null;
     let currentHighlightSpanIndex = 0;
     let playbackPhase = "idle";
+    let deferredPrompt = null;
 
     function countDevanagariBeats(text) {
       if (!text) return 1;
@@ -977,6 +1919,7 @@
       dom.systemVoiceOptGroup.innerHTML = "";
       const allVoices = tts.voices || [];
 
+      // Clean label without exposing internal preference rules
       const autoOpt = document.createElement("option");
       autoOpt.value = "auto_detect";
       autoOpt.textContent = "✨ स्वतः अनुशंसित (Auto Recommended)";
@@ -985,19 +1928,19 @@
       if (allVoices.length === 0) {
         const fallbackOpt = document.createElement("option");
         fallbackOpt.value = "sys_default";
-        fallbackOpt.textContent = "📱 डिफ़ॉल्ट सिस्टम वाक् (Android / System TTS)";
+        fallbackOpt.textContent = "📱 डिफ़ॉल्ट सिस्टम वाक्";
         dom.systemVoiceOptGroup.appendChild(fallbackOpt);
       } else {
-        const indicVoices = allVoices.filter(v => tts.matchesAllowedTag(v));
+        const indicVoices = allVoices.filter(v => tts.isIndianVoice(v));
         const displayList = indicVoices.length > 0 ? indicVoices : allVoices;
+
         displayList.forEach(voice => {
           const opt = document.createElement("option");
           opt.value = `sys_${voice.voiceURI}`;
-          const isSa = tts.isSaIn(voice);
-          const isHi = tts.matchesAllowedTag(voice);
           let label = voice.name;
-          if (isSa) label = `🛕 [संस्कृत sa-IN] ${label}`;
-          else if (isHi) label = `🇮🇳 [हिंदी hi-IN] ${label}`;
+          if (tts.isSanskritVoice(voice)) label = `🛕 [संस्कृत / sa] ${label}`;
+          else if (tts.isHindiVoice(voice)) label = `🇮🇳 [हिंदी / hi] ${label}`;
+          else if (tts.isIndianVoice(voice)) label = `🇮🇳 [भारतीय / ${voice.lang}] ${label}`;
           else label = `📱 [${voice.lang || 'Sys'}] ${label}`;
           opt.textContent = label;
           dom.systemVoiceOptGroup.appendChild(opt);
@@ -1010,14 +1953,17 @@
 
     function updateVoiceBadgeDisplay() {
       if (!dom.voiceBadge) return;
-      if (state.selectedVoiceId === "cloud_hi") { dom.voiceBadge.textContent = "क्लाउड सक्रिय"; return; }
-      const activeVoice = tts.getDefaultSaOrHiVoice(false);
-      if (activeVoice) {
-        if (tts.isSaIn(activeVoice)) dom.voiceBadge.textContent = "sa-IN (सक्रिय)";
-        else if (tts.matchesAllowedTag(activeVoice)) dom.voiceBadge.textContent = "hi-IN (सक्रिय)";
-        else dom.voiceBadge.textContent = "सिस्टम वाक्";
+      if (state.selectedVoiceId === "cloud_hi") {
+        dom.voiceBadge.textContent = "🌐 क्लाउड सक्रिय";
+        return;
+      }
+      const preferred = tts.getPreferredVoice(false);
+      if (preferred) {
+        if (tts.isSanskritVoice(preferred)) dom.voiceBadge.textContent = "sa-IN (सक्रिय)";
+        else if (tts.isHindiVoice(preferred)) dom.voiceBadge.textContent = "hi-IN (सक्रिय)";
+        else dom.voiceBadge.textContent = `${preferred.lang} (सक्रिय)`;
       } else {
-        dom.voiceBadge.textContent = "सिस्टम तैयार";
+        dom.voiceBadge.textContent = "🌐 क्लाउड बैकअप सक्रिय";
       }
     }
 
@@ -1120,8 +2066,8 @@
       if (state.enableChime) bellPlayer.playChime(528);
 
       setTimeout(() => {
-        const isRepeatable = (state.currentPreset === "gayatri_havan" && (state.currentStepIndex === 8 || step.isHavanAhuti));
-        const shouldExplain = state.explainEnabled && (!isRepeatable || (state.ahutiCount || 1) <= 1);
+        const isAhutiStep = (state.currentPreset === "gayatri_havan" && (state.currentStepIndex === 8 || step.isHavanAhuti));
+        const shouldExplain = state.explainEnabled && (!isAhutiStep || (state.ahutiCount || 1) <= 1) && !state.mantraRepeatEnabled;
         const explanationText = [step.meaning, step.mantraMeaning].filter(Boolean).join(" ");
 
         if (shouldExplain && explanationText.trim().length > 0) {
@@ -1160,10 +2106,17 @@
       clearWordHighlights();
       if (dom.meaningContainer) dom.meaningContainer.classList.remove("speaking-explanation");
 
-      const steps = getCurrentSteps();
-      const isRepeatable = (state.currentPreset === "gayatri_havan" && (state.currentStepIndex === 8 || steps[state.currentStepIndex]?.isHavanAhuti));
+      // Indefinite mantra repeat overrides Auto-next
+      if (state.mantraRepeatEnabled) {
+        showToast("मंत्र निरंतर पुनरावृत्ति (Mantra Repeating...)");
+        setTimeout(() => playActiveStep(), 600);
+        return;
+      }
 
-      if (isRepeatable && state.ahutiRepeatEnabled) {
+      const steps = getCurrentSteps();
+      const isAhutiStep = (state.currentPreset === "gayatri_havan" && (state.currentStepIndex === 8 || steps[state.currentStepIndex]?.isHavanAhuti));
+
+      if (isAhutiStep && state.ahutiRepeatEnabled) {
         state.ahutiCount = (state.ahutiCount || 1) + 1;
         saveState();
         updateAhutiCounterUI();
@@ -1254,9 +2207,30 @@
     };
 
     dom.autoAdvanceToggle.onchange = (e) => { state.autoAdvance = e.target.checked; saveState(); };
+
+    if (dom.mantraRepeatToggle) {
+      dom.mantraRepeatToggle.onchange = (e) => {
+        state.mantraRepeatEnabled = e.target.checked;
+        saveState();
+        if (state.mantraRepeatEnabled) {
+          showToast("मंत्र निरंतर पुनरावृत्ति सक्रिय (Mantra Repeat ON)");
+        } else {
+          showToast("मंत्र पुनरावृत्ति बंद (Mantra Repeat OFF)");
+        }
+      };
+    }
+
     if (dom.explainToggle) dom.explainToggle.onchange = (e) => { state.explainEnabled = e.target.checked; saveState(); };
     dom.chimeToggle.onchange = (e) => { state.enableChime = e.target.checked; saveState(); };
     if (dom.ahutiRepeatToggle) dom.ahutiRepeatToggle.onchange = (e) => { state.ahutiRepeatEnabled = e.target.checked; saveState(); };
+
+    if (dom.closeTtsBannerBtn) {
+      dom.closeTtsBannerBtn.onclick = () => {
+        state.bannerDismissed = true;
+        saveState();
+        dom.androidTtsBanner.classList.remove("active");
+      };
+    }
 
     if (dom.ahutiMinusBtn) {
       dom.ahutiMinusBtn.onclick = () => {
@@ -1322,9 +2296,41 @@
       else if (e.code === "ArrowRight") { e.preventDefault(); dom.nextBtn.click(); }
     });
 
+    // PWA Install prompt handling
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      if (dom.pwaInstallBtn && !window.matchMedia('(display-mode: standalone)').matches) {
+        dom.pwaInstallBtn.style.display = 'inline-flex';
+      }
+    });
+
+    if (dom.pwaInstallBtn) {
+      dom.pwaInstallBtn.addEventListener('click', async () => {
+        if (!deferredPrompt) {
+          showToast("ऐप पहले से इंस्टॉल है या ब्राउज़र मेनू से 'Add to Home screen' चुनें।");
+          return;
+        }
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+          showToast("ईश वंदन ऐप सफलतापूर्वक इंस्टॉल हुआ!");
+          dom.pwaInstallBtn.style.display = 'none';
+        }
+        deferredPrompt = null;
+      });
+    }
+
+    window.addEventListener('appinstalled', () => {
+      deferredPrompt = null;
+      if (dom.pwaInstallBtn) dom.pwaInstallBtn.style.display = 'none';
+      showToast("ईश वंदन ऐप स्थापित हो चुका है!");
+    });
+
     window.onload = () => {
       loadState();
       dom.autoAdvanceToggle.checked = state.autoAdvance !== false;
+      if (dom.mantraRepeatToggle) dom.mantraRepeatToggle.checked = !!state.mantraRepeatEnabled;
       if (dom.explainToggle) dom.explainToggle.checked = state.explainEnabled !== false;
       if (dom.chimeToggle) dom.chimeToggle.checked = state.enableChime !== false;
       if (dom.ahutiRepeatToggle) dom.ahutiRepeatToggle.checked = state.ahutiRepeatEnabled !== false;
